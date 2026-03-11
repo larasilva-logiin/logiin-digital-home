@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import ServicesPage from "./pages/ServicesPage";
-import PortfolioPage from "./pages/PortfolioPage";
 import BlogPage from "./pages/BlogPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -25,7 +24,6 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/servicos" element={<ServicesPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/sobre" element={<AboutPage />} />
             <Route path="/contato" element={<ContactPage />} />
