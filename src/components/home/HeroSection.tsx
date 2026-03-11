@@ -60,7 +60,7 @@ const HeroSection = () => {
             <Link to="/servicos">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-heading font-semibold text-base px-8 py-6"
+                className="font-heading font-semibold text-base px-8 py-6"
               >
                 Ver nossos serviços
               </Button>
@@ -69,7 +69,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-heading font-semibold text-base px-8 py-6"
+                className="border-2 border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 hover:text-primary-foreground font-heading font-semibold text-base px-8 py-6"
               >
                 Fale com a gente
               </Button>

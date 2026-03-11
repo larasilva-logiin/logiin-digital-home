@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const CTABanner = () => (
   <section className="relative overflow-hidden">
-    <div className="bg-brand-gradient section-padding">
+    <div className="bg-primary section-padding">
       <AnimatedSection className="container-max text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
           Pronto para transformar seu espaço?
@@ -17,7 +17,8 @@ const CTABanner = () => (
           <Link to="/contato">
             <Button
               size="lg"
-              className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-semibold px-8"
+              variant="dark"
+              className="font-heading font-semibold px-8"
             >
               Solicitar orçamento
             </Button>
@@ -25,8 +26,7 @@ const CTABanner = () => (
           <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-heading font-semibold px-8"
+              className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-heading font-semibold px-8"
             >
               <MessageCircle size={18} className="mr-2" />
               Falar no WhatsApp

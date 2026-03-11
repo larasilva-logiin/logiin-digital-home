@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "Início", path: "/" },
   { label: "Serviços", path: "/servicos" },
-  { label: "Portfólio", path: "/portfolio" },
   { label: "Blog", path: "/blog" },
   { label: "Sobre", path: "/sobre" },
   { label: "Contato", path: "/contato" },
@@ -62,7 +61,7 @@ const Header = () => {
 
           <div className="hidden lg:flex items-center gap-3">
             <Link to="/contato">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-heading font-semibold">
+              <Button className="font-heading font-semibold">
                 Orçamento Grátis
               </Button>
             </Link>
@@ -100,7 +99,7 @@ const Header = () => {
                 </Link>
               ))}
               <Link to="/contato" className="mt-2">
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-heading font-semibold">
+                <Button className="w-full font-heading font-semibold">
                   Orçamento Grátis
                 </Button>
               </Link>

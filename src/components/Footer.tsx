@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Youtube, Linkedin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -63,7 +63,6 @@ const Footer = () => {
             <ul className="space-y-2.5 text-sm text-primary-foreground/60">
               {[
                 { label: "Início", path: "/" },
-                { label: "Portfólio", path: "/portfolio" },
                 { label: "Blog", path: "/blog" },
                 { label: "Sobre nós", path: "/sobre" },
                 { label: "Contato", path: "/contato" },
@@ -89,10 +88,6 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-primary flex-shrink-0" />
                 contato@logiin.com.br
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-primary flex-shrink-0 mt-0.5" />
-                São Paulo, SP — Brasil
               </li>
             </ul>
           </div>
