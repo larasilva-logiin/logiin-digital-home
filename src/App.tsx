@@ -2,15 +2,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import Index from "./pages/Index";
-import ServicesPage from "./pages/ServicesPage";
-import BlogPage from "./pages/BlogPage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import NotFound from "./pages/NotFound";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
+import Home from "@/pages/Home";
+import Solucoes from "@/pages/Solucoes";
+import LogiinPage from "@/pages/LogiinPage";
+import QuemSomos from "@/pages/QuemSomos";
+import Blog from "@/pages/Blog";
+import ContactPage from "@/pages/ContactPage";
+import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -19,13 +21,15 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <BrowserRouter>
-        <Header />
+        <ScrollToTop />
+        <Navbar />
         <main className="min-h-screen">
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/servicos" element={<ServicesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/sobre" element={<AboutPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/solucoes" element={<Solucoes />} />
+            <Route path="/logiin" element={<LogiinPage />} />
+            <Route path="/quem-somos" element={<QuemSomos />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contato" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
