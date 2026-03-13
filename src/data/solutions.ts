@@ -1,0 +1,126 @@
+import { Camera, DoorOpen, Home, Bell, Network, Headset } from "lucide-react";
+
+export const solutions = [
+  {
+    id: "cftv",
+    icon: Camera,
+    title: "CFTV e Monitoramento",
+    short: "Monitoramento 24h com câmeras de alta resolução e acesso remoto",
+    description: "Sistemas profissionais de CFTV com câmeras IP de alta definição, gravação contínua em nuvem e acesso remoto pelo smartphone. Monitore seu patrimônio de qualquer lugar do mundo com imagens nítidas e alertas inteligentes.",
+    segments: ["Residencial", "Empresarial", "Condomínio"],
+    steps: [
+      "Diagnóstico completo dos pontos críticos de monitoramento",
+      "Instalação de câmeras de alta resolução com infraestrutura profissional",
+      "Configuração de acesso remoto e alertas inteligentes",
+    ],
+    benefits: [
+      "Monitoramento 24/7 em tempo real",
+      "Acesso remoto via smartphone",
+      "Gravação em nuvem e local",
+      "Detecção de movimento com IA",
+      "Visão noturna avançada",
+    ],
+  },
+  {
+    id: "controle-acesso",
+    icon: DoorOpen,
+    title: "Controle de Acesso",
+    short: "Gerencie quem entra e sai com biometria, cartão ou reconhecimento facial",
+    description: "Sistemas avançados de controle de acesso por biometria, cartão de proximidade, senha ou reconhecimento facial. Ideal para condomínios, empresas e residências que precisam de segurança reforçada e registro completo de movimentações.",
+    segments: ["Empresarial", "Condomínio"],
+    steps: [
+      "Definimos o método de autenticação ideal para seu espaço",
+      "Instalamos leitores e controladores em todos os pontos de acesso",
+      "Configuramos permissões, horários e registros automáticos",
+    ],
+    benefits: [
+      "Biometria e reconhecimento facial",
+      "Registro completo de entradas e saídas",
+      "Controle de horários e permissões",
+      "Integração com portaria remota",
+      "Gestão centralizada via aplicativo",
+    ],
+  },
+  {
+    id: "automacao",
+    icon: Home,
+    title: "Automação Residencial",
+    short: "Transforme sua casa numa casa inteligente com controle total",
+    description: "Controle iluminação, cortinas, ar-condicionado, som ambiente e muito mais pelo celular ou por voz. Crie cenários personalizados, economize energia e transforme sua rotina com automação inteligente.",
+    segments: ["Residencial"],
+    steps: [
+      "Entendemos suas necessidades e rotinas do dia a dia",
+      "Projetamos a automação com dispositivos compatíveis e integrados",
+      "Instalamos e integramos tudo em um único app de controle",
+    ],
+    benefits: [
+      "Controle por voz e aplicativo",
+      "Cenários personalizados para cada momento",
+      "Economia de energia inteligente",
+      "Integração com Alexa, Google e Siri",
+      "Conforto e praticidade no dia a dia",
+    ],
+  },
+  {
+    id: "alarmes",
+    icon: Bell,
+    title: "Alarmes e Sensores",
+    short: "Sistemas de alarme inteligentes com monitoramento profissional",
+    description: "Alarmes monitorados com sensores de presença, abertura e vibração. Receba notificações instantâneas no celular e tenha resposta rápida em qualquer situação de emergência, 24 horas por dia.",
+    segments: ["Residencial", "Empresarial", "Condomínio"],
+    steps: [
+      "Analisamos as vulnerabilidades e pontos de entrada do local",
+      "Instalamos sensores estratégicos e central de alarme inteligente",
+      "Ativamos o monitoramento 24h com alertas em tempo real",
+    ],
+    benefits: [
+      "Alertas instantâneos no celular",
+      "Sensores de presença e abertura",
+      "Monitoramento profissional 24h",
+      "Integração com câmeras e automação",
+      "Sirene de alta potência com backup",
+    ],
+  },
+  {
+    id: "redes",
+    icon: Network,
+    title: "Redes e Cabeamento",
+    short: "Infraestrutura de rede profissional e cabeamento estruturado",
+    description: "Projetos completos de infraestrutura de rede com cabeamento estruturado, Wi-Fi corporativo e soluções de conectividade. Garantimos performance, estabilidade e escalabilidade para sua empresa ou residência.",
+    segments: ["Empresarial", "Condomínio"],
+    steps: [
+      "Avaliamos a necessidade de rede e pontos de conexão",
+      "Projetamos o cabeamento estruturado com certificação",
+      "Instalamos e testamos todos os pontos com garantia de performance",
+    ],
+    benefits: [
+      "Cabeamento certificado Cat5e/Cat6",
+      "Wi-Fi corporativo de alta performance",
+      "Organização profissional de rack",
+      "Escalabilidade para crescimento",
+      "Suporte técnico especializado",
+    ],
+  },
+  {
+    id: "suporte",
+    icon: Headset,
+    title: "Suporte Técnico",
+    short: "Suporte especializado 24/7 com atendimento rápido e humanizado",
+    description: "Equipe técnica especializada disponível 24 horas para manutenção preventiva e corretiva. Monitoramento remoto dos sistemas, atualizações e suporte proativo para garantir que tudo funcione perfeitamente.",
+    segments: ["Residencial", "Empresarial", "Condomínio"],
+    steps: [
+      "Abertura de chamado via app, WhatsApp ou telefone",
+      "Diagnóstico remoto ou presencial do problema",
+      "Resolução técnica com garantia de qualidade",
+    ],
+    benefits: [
+      "Atendimento 24/7 via múltiplos canais",
+      "Diagnóstico remoto inteligente",
+      "Manutenção preventiva programada",
+      "Tempo de resposta garantido",
+      "Equipe certificada e treinada",
+    ],
+  },
+];
+
+export const solutionCategories = ["Todos", "Residencial", "Empresarial", "Condomínio"];
