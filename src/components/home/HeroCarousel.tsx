@@ -20,7 +20,7 @@ const HeroCarousel = () => {
     return () => clearInterval(timer);
   }, [next]);
 
-  const slide = slides[current];
+  
 
   return (
     <section className="relative h-screen overflow-hidden bg-navy">
