@@ -4,17 +4,17 @@ export const solutions = [
   {
     id: "cftv",
     icon: Camera,
-    title: "CFTV e Monitoramento",
-    short: "Monitoramento 24h com câmeras de alta resolução e acesso remoto",
-    description: "Sistemas profissionais de CFTV com câmeras IP de alta definição, gravação contínua em nuvem e acesso remoto pelo smartphone. Monitore seu patrimônio de qualquer lugar do mundo com imagens nítidas e alertas inteligentes.",
+    title: "CFTV",
+    short: "Câmeras de alta resolução com acesso remoto 24h",
+    description: "Sistemas profissionais de CFTV com câmeras IP de alta definição, gravação contínua em nuvem e acesso remoto pelo smartphone. Acompanhe seu patrimônio de qualquer lugar do mundo com imagens nítidas e alertas inteligentes.",
     segments: ["Residencial", "Empresarial", "Condomínio"],
     steps: [
-      "Diagnóstico completo dos pontos críticos de monitoramento",
+      "Diagnóstico completo dos pontos críticos de segurança",
       "Instalação de câmeras de alta resolução com infraestrutura profissional",
       "Configuração de acesso remoto e alertas inteligentes",
     ],
     benefits: [
-      "Monitoramento 24/7 em tempo real",
+      "Vigilância 24/7 em tempo real",
       "Acesso remoto via smartphone",
       "Gravação em nuvem e local",
       "Detecção de movimento com IA",
