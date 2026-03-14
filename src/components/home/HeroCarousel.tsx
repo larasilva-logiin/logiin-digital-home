@@ -35,8 +35,8 @@ const HeroCarousel = () => {
           className="absolute inset-0"
         >
           <img
-            src={slide.image}
-            alt=""
+            src={slides[current]}
+            alt="Logiin"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--navy)/0.92)] via-[hsl(var(--navy)/0.75)] to-[hsl(var(--navy)/0.5)]" />
