@@ -71,46 +71,37 @@ const HeroCarousel = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Content */}
+      {/* Static Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="container-max px-4 sm:px-6 lg:px-8 w-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-2xl"
-            >
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-6">
-                {slide.badge}
-              </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white leading-[1.1] mb-6">
-                {slide.title}{" "}
-                <span className="text-gradient">{slide.highlight}</span>
-              </h1>
-              <p className="text-lg text-[hsl(210,30%,70%)] max-w-lg mb-8 leading-relaxed">
-                {slide.subtitle}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to={slide.cta1.to}>
-                  <Button size="lg" className="font-semibold text-base px-8 py-6 rounded-full">
-                    {slide.cta1.label}
-                  </Button>
-                </Link>
-                <Link to={slide.cta2.to}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold text-base px-8 py-6 rounded-full"
-                  >
-                    {slide.cta2.label}
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+          <div className="max-w-2xl">
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-6">
+              Segurança & Automação
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white leading-[1.1] mb-6">
+              Conectividade inteligente que{" "}
+              <span className="text-gradient">protege o que importa</span>
+            </h1>
+            <p className="text-lg text-[hsl(210,30%,70%)] max-w-lg mb-8 leading-relaxed">
+              Soluções integradas de CFTV, controle de acesso e automação para residências, condomínios e empresas.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/solucoes">
+                <Button size="lg" className="font-semibold text-base px-8 py-6 rounded-full">
+                  Conheça as Soluções
+                </Button>
+              </Link>
+              <Link to="/contato">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold text-base px-8 py-6 rounded-full"
+                >
+                  Solicitar Orçamento
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 

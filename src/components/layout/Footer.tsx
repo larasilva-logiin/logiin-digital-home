@@ -60,8 +60,7 @@ const Footer = () => (
           <ul className="space-y-2.5 text-sm text-white/50">
             {[
               { label: "Início", path: "/" },
-              { label: "Plataforma Logiin", path: "/logiin" },
-              { label: "Quem Somos", path: "/quem-somos" },
+              { label: "Logiin", path: "/quem-somos" },
               { label: "Blog", path: "/blog" },
               { label: "Contato", path: "/contato" },
             ].map((l) => (
