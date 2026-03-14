@@ -10,9 +10,7 @@ const Footer = () => (
         {/* Logo & Description */}
         <div>
           <Link to="/" className="inline-block mb-4">
-            <span className="text-2xl font-extrabold">
-              Log<span className="text-primary">iin</span>
-            </span>
+            <img src={logoBranca} alt="Logiin" className="h-8 w-auto" />
           </Link>
           <p className="text-sm text-white/50 leading-relaxed mb-6">
             Conectividade inteligente que protege o que importa. Soluções integradas de segurança e automação para todo o Brasil.
