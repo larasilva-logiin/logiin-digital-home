@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
 import { solutions } from "@/data/solutions";
+import logoBranca from "@/assets/logo-branca.png";
 
 const Footer = () => (
   <footer className="bg-navy text-white">
@@ -9,9 +10,7 @@ const Footer = () => (
         {/* Logo & Description */}
         <div>
           <Link to="/" className="inline-block mb-4">
-            <span className="text-2xl font-extrabold">
-              Log<span className="text-primary">iin</span>
-            </span>
+            <img src={logoBranca} alt="Logiin" className="h-8 w-auto" />
           </Link>
           <p className="text-sm text-white/50 leading-relaxed mb-6">
             Conectividade inteligente que protege o que importa. Soluções integradas de segurança e automação para todo o Brasil.
@@ -61,8 +60,7 @@ const Footer = () => (
           <ul className="space-y-2.5 text-sm text-white/50">
             {[
               { label: "Início", path: "/" },
-              { label: "Plataforma Logiin", path: "/logiin" },
-              { label: "Quem Somos", path: "/quem-somos" },
+              { label: "Logiin", path: "/quem-somos" },
               { label: "Blog", path: "/blog" },
               { label: "Contato", path: "/contato" },
             ].map((l) => (

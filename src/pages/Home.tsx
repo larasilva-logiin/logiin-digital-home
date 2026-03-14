@@ -48,7 +48,7 @@ const Home = () => {
   const whyItems = [
     { icon: Shield, title: "Equipamentos certificados", desc: "Trabalhamos com marcas homologadas e certificadas pela Anatel" },
     { icon: Users, title: "Equipe especializada", desc: "Técnicos treinados e certificados nas melhores tecnologias" },
-    { icon: Clock, title: "Suporte 24 horas", desc: "Monitoramento e suporte contínuo para sua tranquilidade" },
+    { icon: Clock, title: "Suporte 24 horas", desc: "Acompanhamento e suporte contínuo para sua tranquilidade" },
     { icon: Wifi, title: "Integração total", desc: "Todos os sistemas conectados e gerenciados em um só lugar" },
   ];
 

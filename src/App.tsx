@@ -8,7 +8,7 @@ import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Solucoes from "@/pages/Solucoes";
-import LogiinPage from "@/pages/LogiinPage";
+
 import QuemSomos from "@/pages/QuemSomos";
 import Blog from "@/pages/Blog";
 import ContactPage from "@/pages/ContactPage";
@@ -27,7 +27,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/solucoes" element={<Solucoes />} />
-            <Route path="/logiin" element={<LogiinPage />} />
+            
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contato" element={<ContactPage />} />

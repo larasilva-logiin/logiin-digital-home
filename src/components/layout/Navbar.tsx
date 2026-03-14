@@ -4,12 +4,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { solutions } from "@/data/solutions";
+import logoBranca from "@/assets/logo-branca.png";
 
 const navLinks = [
   { label: "Início", path: "/" },
   { label: "Soluções", path: "/solucoes", hasDropdown: true },
-  { label: "Logiin", path: "/logiin" },
-  { label: "Quem Somos", path: "/quem-somos" },
+  { label: "Logiin", path: "/quem-somos" },
   { label: "Blog", path: "/blog" },
 ];
 
@@ -42,9 +42,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1 group">
-            <span className="text-2xl lg:text-3xl font-extrabold text-white">
-              Log<span className="text-primary">iin</span>
-            </span>
+            <img src={logoBranca} alt="Logiin" className="h-8 lg:h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
