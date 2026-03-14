@@ -6,35 +6,7 @@ import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 
-const slides = [
-  {
-    image: hero1,
-    badge: "Segurança Eletrônica",
-    title: "Conectividade inteligente que",
-    highlight: "protege o que importa",
-    subtitle: "Soluções integradas de CFTV, controle de acesso e automação para residências, condomínios e empresas.",
-    cta1: { label: "Conheça as Soluções", to: "/solucoes" },
-    cta2: { label: "Solicitar Orçamento", to: "/contato" },
-  },
-  {
-    image: hero2,
-    badge: "Automação Residencial",
-    title: "Sua casa inteligente",
-    highlight: "começa aqui",
-    subtitle: "Controle iluminação, cortinas, climatização e muito mais pelo celular ou por voz.",
-    cta1: { label: "Ver Automação", to: "/solucoes#automacao" },
-    cta2: { label: "Fale Conosco", to: "/contato" },
-  },
-  {
-    image: hero3,
-    badge: "Controle de Acesso",
-    title: "Gerencie quem entra e sai com",
-    highlight: "total controle",
-    subtitle: "Biometria, reconhecimento facial e cartão de proximidade para sua segurança.",
-    cta1: { label: "Saiba Mais", to: "/solucoes#controle-acesso" },
-    cta2: { label: "Solicitar Orçamento", to: "/contato" },
-  },
-];
+const slides = [hero1, hero2, hero3];
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
