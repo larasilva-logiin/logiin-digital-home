@@ -8,7 +8,7 @@ import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Solucoes from "@/pages/Solucoes";
-import LogiinPage from "@/pages/LogiinPage";
+
 import QuemSomos from "@/pages/QuemSomos";
 import Blog from "@/pages/Blog";
 import ContactPage from "@/pages/ContactPage";
