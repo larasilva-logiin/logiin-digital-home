@@ -8,8 +8,7 @@ import { solutions } from "@/data/solutions";
 const navLinks = [
   { label: "Início", path: "/" },
   { label: "Soluções", path: "/solucoes", hasDropdown: true },
-  { label: "Logiin", path: "/logiin" },
-  { label: "Quem Somos", path: "/quem-somos" },
+  { label: "Logiin", path: "/quem-somos" },
   { label: "Blog", path: "/blog" },
 ];
 
