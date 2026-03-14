@@ -76,7 +76,7 @@ export const solutions = [
     benefits: [
       "Alertas instantâneos no celular",
       "Sensores de presença e abertura",
-      "Monitoramento profissional 24h",
+      "Proteção profissional 24h",
       "Integração com câmeras e automação",
       "Sirene de alta potência com backup",
     ],
