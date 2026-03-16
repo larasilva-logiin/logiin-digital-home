@@ -3,36 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Lightbulb, ShieldCheck, Star, Heart, Leaf, Droplets, TreePine, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedSection from "@/components/AnimatedSection";
-
-const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          const steps = 40;
-          const inc = target / steps;
-          let cur = 0;
-          const timer = setInterval(() => {
-            cur += inc;
-            if (cur >= target) { setCount(target); clearInterval(timer); }
-            else setCount(Math.floor(cur));
-          }, 1500 / steps);
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [target]);
-
-  return <span ref={ref}>{count}{suffix}</span>;
-};
-
 const values = [
   { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", color: "from-emerald-400 to-teal-500" },
   { icon: ShieldCheck, title: "Confiança", desc: "Construímos relações duradouras com honestidade e transparência em cada projeto.", color: "from-sky-400 to-blue-500" },
