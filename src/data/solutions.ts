@@ -105,8 +105,8 @@ export const solutions = [
     id: "suporte",
     icon: Headset,
     title: "Suporte Técnico",
-    short: "Suporte especializado 24/7 com atendimento rápido e humanizado",
-    description: "Equipe técnica especializada disponível 24 horas para manutenção preventiva e corretiva. Acompanhamento remoto dos sistemas, atualizações e suporte proativo para garantir que tudo funcione perfeitamente.",
+    short: "Suporte especializado com atendimento rápido e humanizado",
+    description: "Equipe técnica especializada para manutenção preventiva e corretiva. Acompanhamento remoto dos sistemas, atualizações e suporte proativo para garantir que tudo funcione perfeitamente.",
     segments: ["Residencial", "Empresarial", "Condomínio"],
     steps: [
       "Abertura de chamado via app, WhatsApp ou telefone",
