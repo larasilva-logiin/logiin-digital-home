@@ -71,7 +71,7 @@ export const solutions = [
     steps: [
       "Analisamos as vulnerabilidades e pontos de entrada do local",
       "Instalamos sensores estratégicos e central de alarme inteligente",
-      "Ativamos a proteção 24h com alertas em tempo real",
+      "Ativamos a proteção com alertas em tempo real",
     ],
     benefits: [
       "Alertas instantâneos no celular",
