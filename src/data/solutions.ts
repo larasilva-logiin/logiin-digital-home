@@ -98,7 +98,7 @@ export const solutions = [
       "Wi-Fi corporativo de alta performance",
       "Organização profissional de rack",
       "Escalabilidade para crescimento",
-      "Suporte técnico especializado",
+      "Acompanhamento técnico especializado",
     ],
   },
   {
