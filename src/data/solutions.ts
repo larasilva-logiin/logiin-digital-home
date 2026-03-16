@@ -66,7 +66,7 @@ export const solutions = [
     icon: Bell,
     title: "Alarmes e Sensores",
     short: "Sistemas de alarme inteligentes com proteção profissional",
-    description: "Alarmes inteligentes com sensores de presença, abertura e vibração. Receba notificações instantâneas no celular e tenha resposta rápida em qualquer situação de emergência, 24 horas por dia.",
+    description: "Alarmes inteligentes com sensores de presença, abertura e vibração. Receba notificações instantâneas no celular e tenha resposta rápida em qualquer situação de emergência.",
     segments: ["Residencial", "Empresarial", "Condomínio"],
     steps: [
       "Analisamos as vulnerabilidades e pontos de entrada do local",
