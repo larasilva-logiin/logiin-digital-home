@@ -5,7 +5,7 @@ export const solutions = [
     id: "cftv",
     icon: Camera,
     title: "CFTV",
-    short: "Câmeras de alta resolução com acesso remoto 24h",
+    short: "Câmeras de alta resolução com acesso remoto",
     description: "Sistemas profissionais de CFTV com câmeras IP de alta definição, gravação contínua em nuvem e acesso remoto pelo smartphone. Acompanhe seu patrimônio de qualquer lugar do mundo com imagens nítidas e alertas inteligentes.",
     segments: ["Residencial", "Empresarial", "Condomínio"],
     steps: [
