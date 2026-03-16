@@ -41,7 +41,6 @@ const Home = () => {
   const stats = [
     { label: "Clientes", value: 500, suffix: "+" },
     { label: "Anos de mercado", value: 10, suffix: "+" },
-    { label: "Suporte", value: 24, suffix: "/7" },
     { label: "Satisfação", value: 98, suffix: "%" },
   ];
 
