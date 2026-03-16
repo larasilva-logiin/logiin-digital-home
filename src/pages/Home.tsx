@@ -55,7 +55,7 @@ const Home = () => {
     { num: 1, title: "Diagnóstico gratuito", desc: "Avaliamos suas necessidades e identificamos a melhor solução" },
     { num: 2, title: "Projeto personalizado", desc: "Desenvolvemos um projeto sob medida para seu espaço" },
     { num: 3, title: "Instalação profissional", desc: "Execução técnica com garantia e acabamento impecável" },
-    { num: 4, title: "Suporte contínuo", desc: "Acompanhamento pós-instalação com suporte dedicado" },
+    { num: 4, title: "Acompanhamento", desc: "Acompanhamento pós-instalação com suporte dedicado" },
   ];
 
   return (
