@@ -114,7 +114,7 @@ export const solutions = [
       "Resolução técnica com garantia de qualidade",
     ],
     benefits: [
-      "Atendimento 24/7 via múltiplos canais",
+      "Atendimento via múltiplos canais",
       "Diagnóstico remoto inteligente",
       "Manutenção preventiva programada",
       "Tempo de resposta garantido",

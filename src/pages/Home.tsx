@@ -63,23 +63,6 @@ const Home = () => {
       {/* ── HERO CAROUSEL ── */}
       <HeroCarousel />
 
-      {/* ── STATS ── */}
-      <section className="relative z-10 -mt-12 px-4 sm:px-6 lg:px-8">
-        <div className="container-max">
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-5 bg-navy">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((s, i) => (
-                <div key={i} className={`text-center ${i < stats.length - 1 ? "md:border-r md:border-white/10" : ""}`}>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white">
-                    <Counter target={s.value} suffix={s.suffix} />
-                  </div>
-                  <p className="text-xs text-white/40 mt-1">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── SOLUTIONS ACCORDION ── */}
       <SolutionsAccordion />

@@ -112,53 +112,6 @@ const QuemSomos = () => (
       </div>
     </section>
 
-    {/* Timeline */}
-    <section className="section-padding" style={{ backgroundColor: "hsl(152, 20%, 96%)" }}>
-      <div className="container-max">
-        <AnimatedSection className="text-center mb-14">
-          <h2 className="text-3xl font-extrabold" style={{ color: "hsl(160, 30%, 20%)" }}>
-            Nossa Trajetória
-          </h2>
-        </AnimatedSection>
-        <div className="relative">
-          {/* Connector line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5" style={{ backgroundColor: "hsl(160, 30%, 85%)" }} />
-          <div className="space-y-8 lg:space-y-12">
-            {timeline.map((t, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
-                <div className={`flex flex-col lg:flex-row items-center gap-6 ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
-                  <div className={`flex-1 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
-                    <div className="bg-white rounded-2xl p-6 border border-emerald-100 shadow-sm max-w-md mx-auto lg:mx-0">
-                      <span className="text-2xl font-extrabold text-emerald-500">{t.year}</span>
-                      <h4 className="font-semibold mt-1 mb-2" style={{ color: "hsl(160, 30%, 25%)" }}>{t.title}</h4>
-                      <p className="text-sm" style={{ color: "hsl(160, 10%, 50%)" }}>{t.desc}</p>
-                    </div>
-                  </div>
-                  <div className="relative z-10 w-4 h-4 rounded-full bg-emerald-400 border-4 border-white shadow-md flex-shrink-0" />
-                  <div className="flex-1 hidden lg:block" />
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Stats */}
-    <section className="section-padding" style={{ background: "linear-gradient(135deg, hsl(160, 35%, 30%) 0%, hsl(190, 40%, 28%) 100%)" }}>
-      <div className="container-max">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((s, i) => (
-            <AnimatedSection key={i} delay={i * 0.1} className="text-center">
-              <div className="text-3xl sm:text-4xl font-extrabold text-white mb-1">
-                <Counter target={s.value} suffix={s.suffix} />
-              </div>
-              <p className="text-white/50 text-sm">{s.label}</p>
-            </AnimatedSection>
-          ))}
-        </div>
-      </div>
-    </section>
 
     {/* Valores */}
     <section className="section-padding" style={{ backgroundColor: "hsl(40, 25%, 98%)" }}>
