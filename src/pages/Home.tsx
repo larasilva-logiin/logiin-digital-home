@@ -41,14 +41,13 @@ const Home = () => {
   const stats = [
     { label: "Clientes", value: 500, suffix: "+" },
     { label: "Anos de mercado", value: 10, suffix: "+" },
-    { label: "Suporte", value: 24, suffix: "/7" },
     { label: "Satisfação", value: 98, suffix: "%" },
   ];
 
   const whyItems = [
     { icon: Shield, title: "Equipamentos certificados", desc: "Trabalhamos com marcas homologadas e certificadas pela Anatel" },
     { icon: Users, title: "Equipe especializada", desc: "Técnicos treinados e certificados nas melhores tecnologias" },
-    { icon: Clock, title: "Suporte 24 horas", desc: "Acompanhamento e suporte contínuo para sua tranquilidade" },
+    { icon: Clock, title: "Suporte dedicado", desc: "Acompanhamento e suporte contínuo para sua tranquilidade" },
     { icon: Wifi, title: "Integração total", desc: "Todos os sistemas conectados e gerenciados em um só lugar" },
   ];
 
@@ -56,7 +55,7 @@ const Home = () => {
     { num: 1, title: "Diagnóstico gratuito", desc: "Avaliamos suas necessidades e identificamos a melhor solução" },
     { num: 2, title: "Projeto personalizado", desc: "Desenvolvemos um projeto sob medida para seu espaço" },
     { num: 3, title: "Instalação profissional", desc: "Execução técnica com garantia e acabamento impecável" },
-    { num: 4, title: "Suporte contínuo", desc: "Acompanhamento pós-instalação com suporte dedicado" },
+    { num: 4, title: "Acompanhamento", desc: "Acompanhamento pós-instalação com suporte dedicado" },
   ];
 
   return (
@@ -64,23 +63,6 @@ const Home = () => {
       {/* ── HERO CAROUSEL ── */}
       <HeroCarousel />
 
-      {/* ── STATS ── */}
-      <section className="relative z-10 -mt-12 px-4 sm:px-6 lg:px-8">
-        <div className="container-max">
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-5 bg-navy">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((s, i) => (
-                <div key={i} className={`text-center ${i < stats.length - 1 ? "md:border-r md:border-white/10" : ""}`}>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white">
-                    <Counter target={s.value} suffix={s.suffix} />
-                  </div>
-                  <p className="text-xs text-white/40 mt-1">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── SOLUTIONS ACCORDION ── */}
       <SolutionsAccordion />
