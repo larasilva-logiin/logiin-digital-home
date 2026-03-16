@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, ShieldCheck, Star, Heart, Leaf, Droplets, TreePine, MapPin } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
+import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
