@@ -41,21 +41,6 @@ const values = [
   { icon: Heart, title: "Atendimento humanizado", desc: "Cada cliente é único. Ouvimos, entendemos e personalizamos cada solução.", color: "from-amber-400 to-orange-400" },
 ];
 
-const stats = [
-  { value: 500, suffix: "+", label: "Instalações realizadas" },
-  { value: 10, suffix: "+", label: "Anos de experiência" },
-  { value: 98, suffix: "%", label: "Clientes satisfeitos" },
-  { value: 24, suffix: "/7", label: "Suporte disponível" },
-];
-
-const timeline = [
-  { year: "2014", title: "Fundação", desc: "Início das operações em Manaus, com o sonho de levar tecnologia de ponta à Amazônia." },
-  { year: "2016", title: "Primeiro grande projeto", desc: "Entregamos nosso primeiro sistema integrado para um condomínio residencial." },
-  { year: "2018", title: "Automação residencial", desc: "Expandimos nosso portfólio para incluir soluções de automação completa." },
-  { year: "2020", title: "Plataforma Logiin", desc: "Lançamos nosso app proprietário para gestão remota de segurança." },
-  { year: "2023", title: "Expansão nacional", desc: "Começamos a atender clientes em todo o Brasil com suporte remoto." },
-  { year: "2025", title: "O futuro", desc: "500+ clientes ativos e investindo em IA para segurança preditiva." },
-];
 
 const QuemSomos = () => (
   <div>
