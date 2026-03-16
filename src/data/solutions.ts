@@ -14,7 +14,7 @@ export const solutions = [
       "Configuração de acesso remoto e alertas inteligentes",
     ],
     benefits: [
-      "Vigilância 24/7 em tempo real",
+      "Vigilância em tempo real",
       "Acesso remoto via smartphone",
       "Gravação em nuvem e local",
       "Detecção de movimento com IA",
