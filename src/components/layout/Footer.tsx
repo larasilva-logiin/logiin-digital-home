@@ -3,8 +3,8 @@ import { Instagram, Youtube, Linkedin, Phone, Mail, MessageCircle } from "lucide
 import { solutions } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.png";
 
-const Footer = () => (
-  <footer className="bg-navy text-white">
+const Footer = () =>
+<footer className="bg-navy text-white">
     <div className="container-max section-padding pb-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
         {/* Logo & Description */}
@@ -17,22 +17,22 @@ const Footer = () => (
           </p>
           <div className="flex gap-3">
             {[
-              { icon: Instagram, href: "#", label: "Instagram" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Youtube, href: "#", label: "YouTube" },
-              { icon: MessageCircle, href: "https://wa.me/5592999999999", label: "WhatsApp" },
-            ].map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-white/60"
-                aria-label={label}
-              >
+          { icon: Instagram, href: "#", label: "Instagram" },
+          { icon: Linkedin, href: "#", label: "LinkedIn" },
+          { icon: Youtube, href: "#", label: "YouTube" },
+          { icon: MessageCircle, href: "https://wa.me/5592999999999", label: "WhatsApp" }].
+          map(({ icon: Icon, href, label }) =>
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-white/60"
+            aria-label={label}>
+            
                 <Icon size={18} />
               </a>
-            ))}
+          )}
           </div>
         </div>
 
@@ -42,13 +42,13 @@ const Footer = () => (
             Soluções
           </h4>
           <ul className="space-y-2.5 text-sm text-white/50">
-            {solutions.map((s) => (
-              <li key={s.id}>
+            {solutions.map((s) =>
+          <li key={s.id}>
                 <Link to={`/solucoes#${s.id}`} className="hover:text-primary transition-colors">
                   {s.title}
                 </Link>
               </li>
-            ))}
+          )}
           </ul>
         </div>
 
@@ -59,17 +59,17 @@ const Footer = () => (
           </h4>
           <ul className="space-y-2.5 text-sm text-white/50">
             {[
-              { label: "Início", path: "/" },
-              { label: "Logiin", path: "/quem-somos" },
-              { label: "Blog", path: "/blog" },
-              { label: "Contato", path: "/contato" },
-            ].map((l) => (
-              <li key={l.path}>
+          { label: "Início", path: "/" },
+          { label: "Logiin", path: "/quem-somos" },
+          { label: "Blog", path: "/blog" },
+          { label: "Contato", path: "/contato" }].
+          map((l) =>
+          <li key={l.path}>
                 <Link to={l.path} className="hover:text-primary transition-colors">
                   {l.label}
                 </Link>
               </li>
-            ))}
+          )}
           </ul>
         </div>
 
@@ -79,12 +79,12 @@ const Footer = () => (
             Contato
           </h4>
           <ul className="space-y-3 text-sm text-white/50">
-            <li className="flex items-center gap-2">
-              <Phone size={16} className="text-primary flex-shrink-0" />
+            <li className="flex items-center gap-2">(92) 98212.2563
+            <Phone size={16} className="text-primary flex-shrink-0" />
               (92) 99999-9999
             </li>
-            <li className="flex items-center gap-2">
-              <Mail size={16} className="text-primary flex-shrink-0" />
+            <li className="flex items-center gap-2">logiin.automacao@gmail.com
+            <Mail size={16} className="text-primary flex-shrink-0" />
               contato@logiin.com.br
             </li>
           </ul>
@@ -96,7 +96,7 @@ const Footer = () => (
         <p>Desenvolvido com tecnologia Logiin</p>
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;
