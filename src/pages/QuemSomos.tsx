@@ -73,15 +73,8 @@ const QuemSomos = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            {/* Regional image placeholder */}
-            <div className="rounded-3xl overflow-hidden border-2 border-emerald-100" style={{ background: "linear-gradient(135deg, hsl(160, 30%, 90%) 0%, hsl(190, 25%, 88%) 100%)" }}>
-              <div className="aspect-[4/3] flex flex-col items-center justify-center gap-4 p-8">
-                <Droplets size={64} className="text-emerald-300" />
-                <div className="text-center">
-                  <p className="font-semibold" style={{ color: "hsl(160, 30%, 35%)" }}>Manaus, Amazonas</p>
-                  <p className="text-sm" style={{ color: "hsl(160, 15%, 55%)" }}>Onde tudo começou</p>
-                </div>
-              </div>
+            <div className="rounded-3xl overflow-hidden border-2 border-emerald-100 shadow-xl">
+              <img src={manausAerea} alt="Vista aérea de Manaus" className="w-full aspect-[4/3] object-cover" />
             </div>
           </AnimatedSection>
         </div>
