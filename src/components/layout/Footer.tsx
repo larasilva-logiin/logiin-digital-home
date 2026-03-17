@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
+import { Instagram, ALargeSmall, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
 import { solutions } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.png";
 
