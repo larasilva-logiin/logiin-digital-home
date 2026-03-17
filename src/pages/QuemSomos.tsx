@@ -98,12 +98,15 @@ const QuemSomos = () => (
             const Icon = v.icon;
             return (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl border border-emerald-100 p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-5`}>
-                    <Icon size={26} className="text-white" />
+                <div className="group relative bg-white rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-emerald-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon size={28} className="text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-3" style={{ color: "hsl(160, 30%, 25%)" }}>{v.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "hsl(160, 10%, 50%)" }}>{v.desc}</p>
                   </div>
-                  <h3 className="font-bold mb-2" style={{ color: "hsl(160, 30%, 25%)" }}>{v.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "hsl(160, 10%, 50%)" }}>{v.desc}</p>
                 </div>
               </AnimatedSection>
             );
