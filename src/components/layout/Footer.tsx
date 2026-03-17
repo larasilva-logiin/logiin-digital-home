@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
+import { Instagram, ALargeSmall, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
 import { solutions } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.png";
 
@@ -19,7 +19,7 @@ const Footer = () =>
             {[
           { icon: Instagram, href: "#", label: "Instagram" },
           { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: Youtube, href: "#", label: "YouTube" },
+          { icon: ALargeSmall, href: "#", label: "YouTube" },
           { icon: MessageCircle, href: "https://wa.me/5592999999999", label: "WhatsApp" }].
           map(({ icon: Icon, href, label }) =>
           <a
