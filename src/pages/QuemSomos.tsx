@@ -19,7 +19,7 @@ const QuemSomos = () => (
     <section className="relative pt-28 pb-20 px-4 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={manausHero} alt="Manaus, Amazonas" className="w-full h-full object-cover" />
+        <img src={florestaHero} alt="Floresta Amazônica" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
       {/* Decorative leaves */}
