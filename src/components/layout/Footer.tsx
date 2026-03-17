@@ -19,7 +19,7 @@ const Footer = () =>
             {[
           { icon: Instagram, href: "#", label: "Instagram" },
           { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: Youtube, href: "#", label: "YouTube" },
+          { icon: ALargeSmall, href: "#", label: "YouTube" },
           { icon: MessageCircle, href: "https://wa.me/5592999999999", label: "WhatsApp" }].
           map(({ icon: Icon, href, label }) =>
           <a
