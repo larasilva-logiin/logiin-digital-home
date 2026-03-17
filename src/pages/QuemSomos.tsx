@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, ShieldCheck, Star, Heart, Leaf, Droplets, TreePine, MapPin } from "lucide-react";
+import { Lightbulb, ShieldCheck, Star, Heart, Leaf, TreePine, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import manausHero from "@/assets/manaus-hero.jpg";
+import florestaHero from "@/assets/floresta-amazonica.jpg";
+import manausAerea from "@/assets/manaus-aerea.jpg";
 
 const values = [
   { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", color: "from-emerald-400 to-teal-500" },

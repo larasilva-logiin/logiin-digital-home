@@ -13,11 +13,11 @@ const Footer = () =>
             <img src={logoBranca} alt="Logiin" className="h-12 w-auto" />
           </Link>
           <p className="text-sm text-white/50 leading-relaxed mb-6">
-            Conectividade inteligente que protege o que importa. Soluções integradas de segurança e automação para todo o Brasil.
+            Segurança e automação que transformam sua forma de viver.
           </p>
           <div className="flex gap-3">
             {[
-          { icon: Instagram, href: "#", label: "Instagram" },
+          { icon: Instagram, href: "https://www.instagram.com/logiin.automacao?igsh=MWZibjV6ODh6ajdsaA%3D%3D&utm_source=qr", label: "Instagram" },
           { icon: Linkedin, href: "#", label: "LinkedIn" },
           { icon: MessageCircle, href: "https://wa.me/5592982122563", label: "WhatsApp" }].
           map(({ icon: Icon, href, label }) =>
