@@ -72,11 +72,8 @@ const Home = () => {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-navy to-navy-2 border border-white/10 flex items-center justify-center overflow-hidden">
-                <div className="text-center">
-                  <Shield size={80} className="text-primary/30 mx-auto mb-4" />
-                  <p className="text-white/30 text-sm">Tecnologia & Segurança</p>
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                <img src={familiaSegura} alt="Família tranquila em casa com segurança" className="w-full h-full object-cover" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
