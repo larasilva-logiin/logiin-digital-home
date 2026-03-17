@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, ShieldCheck, Star, Heart, Leaf, Droplets, TreePine, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import manausHero from "@/assets/manaus-hero.jpg";
 
 const values = [
   { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", color: "from-emerald-400 to-teal-500" },
@@ -14,27 +15,32 @@ const values = [
 const QuemSomos = () => (
   <div>
     {/* Hero — Amazonian warm tones */}
-    <section className="relative pt-28 pb-20 px-4 overflow-hidden" style={{ background: "linear-gradient(135deg, hsl(152, 30%, 96%) 0%, hsl(190, 30%, 95%) 50%, hsl(140, 25%, 93%) 100%)" }}>
+    <section className="relative pt-28 pb-20 px-4 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={manausHero} alt="Manaus, Amazonas" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
       {/* Decorative leaves */}
       <div className="absolute top-10 right-10 opacity-10">
-        <Leaf size={120} className="text-emerald-600" />
+        <Leaf size={120} className="text-white" />
       </div>
       <div className="absolute bottom-10 left-10 opacity-10">
-        <TreePine size={100} className="text-emerald-700" />
+        <TreePine size={100} className="text-white" />
       </div>
       <div className="container-max text-center relative z-10">
         <AnimatedSection>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 backdrop-blur-sm">
             <MapPin size={16} />
             Nascidos em Manaus, conectados ao Brasil
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: "hsl(160, 30%, 25%)" }}>
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-white">
             Tecnologia com o{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 to-teal-300">
               calor da Amazônia
             </span>
           </h1>
-          <p className="max-w-xl mx-auto text-lg" style={{ color: "hsl(160, 15%, 45%)" }}>
+          <p className="max-w-xl mx-auto text-lg text-white/80">
             Conheça a empresa que protege o que você mais valoriza, com a dedicação e o acolhimento de quem entende a nossa terra.
           </p>
         </AnimatedSection>

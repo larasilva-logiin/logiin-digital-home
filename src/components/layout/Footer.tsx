@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, ALargeSmall, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
+import { Instagram, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
 import { solutions } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.png";
 
@@ -10,7 +10,7 @@ const Footer = () =>
         {/* Logo & Description */}
         <div>
           <Link to="/" className="inline-block mb-4">
-            <img src={logoBranca} alt="Logiin" className="h-8 w-auto" />
+            <img src={logoBranca} alt="Logiin" className="h-12 w-auto" />
           </Link>
           <p className="text-sm text-white/50 leading-relaxed mb-6">
             Conectividade inteligente que protege o que importa. Soluções integradas de segurança e automação para todo o Brasil.
@@ -19,8 +19,7 @@ const Footer = () =>
             {[
           { icon: Instagram, href: "#", label: "Instagram" },
           { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: ALargeSmall, href: "#", label: "YouTube" },
-          { icon: MessageCircle, href: "https://wa.me/5592999999999", label: "WhatsApp" }].
+          { icon: MessageCircle, href: "https://wa.me/5592982122563", label: "WhatsApp" }].
           map(({ icon: Icon, href, label }) =>
           <a
             key={label}
@@ -29,7 +28,6 @@ const Footer = () =>
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors text-white/60"
             aria-label={label}>
-            
                 <Icon size={18} />
               </a>
           )}
@@ -79,13 +77,13 @@ const Footer = () =>
             Contato
           </h4>
           <ul className="space-y-3 text-sm text-white/50">
-            <li className="flex items-center gap-2">(92) 98212.2563
-            <Phone size={16} className="text-primary flex-shrink-0" />
-              (92) 99999-9999
+            <li className="flex items-center gap-2">
+              <Phone size={16} className="text-primary flex-shrink-0" />
+              (92) 98212-2563
             </li>
-            <li className="flex items-center gap-2">logiin.automacao@gmail.com
-            <Mail size={16} className="text-primary flex-shrink-0" />
-              contato@logiin.com.br
+            <li className="flex items-center gap-2">
+              <Mail size={16} className="text-primary flex-shrink-0" />
+              logiin.automacao@gmail.com
             </li>
           </ul>
         </div>
@@ -97,6 +95,5 @@ const Footer = () =>
       </div>
     </div>
   </footer>;
-
 
 export default Footer;
