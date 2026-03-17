@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, ShieldCheck, Star, Heart, Leaf, Droplets, TreePine, MapPin } from "lucide-react";
+import { Lightbulb, ShieldCheck, Star, Heart, Leaf, TreePine, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
-import manausHero from "@/assets/manaus-hero.jpg";
+import florestaHero from "@/assets/floresta-amazonica.jpg";
+import manausAerea from "@/assets/manaus-aerea.jpg";
 
 const values = [
   { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", color: "from-emerald-400 to-teal-500" },
@@ -18,7 +19,7 @@ const QuemSomos = () => (
     <section className="relative pt-28 pb-20 px-4 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={manausHero} alt="Manaus, Amazonas" className="w-full h-full object-cover" />
+        <img src={florestaHero} alt="Floresta Amazônica" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
       {/* Decorative leaves */}
@@ -72,15 +73,8 @@ const QuemSomos = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            {/* Regional image placeholder */}
-            <div className="rounded-3xl overflow-hidden border-2 border-emerald-100" style={{ background: "linear-gradient(135deg, hsl(160, 30%, 90%) 0%, hsl(190, 25%, 88%) 100%)" }}>
-              <div className="aspect-[4/3] flex flex-col items-center justify-center gap-4 p-8">
-                <Droplets size={64} className="text-emerald-300" />
-                <div className="text-center">
-                  <p className="font-semibold" style={{ color: "hsl(160, 30%, 35%)" }}>Manaus, Amazonas</p>
-                  <p className="text-sm" style={{ color: "hsl(160, 15%, 55%)" }}>Onde tudo começou</p>
-                </div>
-              </div>
+            <div className="rounded-3xl overflow-hidden border-2 border-emerald-100 shadow-xl">
+              <img src={manausAerea} alt="Vista aérea de Manaus" className="w-full aspect-[4/3] object-cover" />
             </div>
           </AnimatedSection>
         </div>
@@ -104,12 +98,15 @@ const QuemSomos = () => (
             const Icon = v.icon;
             return (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl border border-emerald-100 p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-5`}>
-                    <Icon size={26} className="text-white" />
+                <div className="group relative bg-white rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-emerald-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon size={28} className="text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-3" style={{ color: "hsl(160, 30%, 25%)" }}>{v.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "hsl(160, 10%, 50%)" }}>{v.desc}</p>
                   </div>
-                  <h3 className="font-bold mb-2" style={{ color: "hsl(160, 30%, 25%)" }}>{v.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "hsl(160, 10%, 50%)" }}>{v.desc}</p>
                 </div>
               </AnimatedSection>
             );
