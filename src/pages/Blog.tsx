@@ -133,6 +133,7 @@ const Blog = () => {
                       </div>
                     </div>
                   </div>
+                  </Link>
                 </motion.div>
               ))}
             </AnimatePresence>
