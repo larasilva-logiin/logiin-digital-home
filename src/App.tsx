@@ -11,6 +11,7 @@ import Solucoes from "@/pages/Solucoes";
 
 import QuemSomos from "@/pages/QuemSomos";
 import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import ContactPage from "@/pages/ContactPage";
 import NotFound from "@/pages/NotFound";
 
