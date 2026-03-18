@@ -103,7 +103,7 @@ export const solutions = [
   },
   {
     id: "outros",
-    icon: Headset,
+    icon: Wrench,
     title: "Outros Serviços",
     short: "Motores de portão, cerca elétrica e fechadura eletrônica",
     description: "Soluções complementares para segurança e automação: motores para portões automáticos, cercas elétricas de alta performance e fechaduras eletrônicas com múltiplos métodos de abertura. Tudo instalado com qualidade profissional.",
