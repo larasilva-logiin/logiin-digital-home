@@ -104,6 +104,7 @@ const Blog = () => {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
                 >
+                  <Link to={`/blog/${post.slug}`} className="block">
                   <div className="bg-card rounded-xl border border-border overflow-hidden group hover:shadow-lg transition-all duration-300">
                     <div className="h-2" style={{ backgroundColor: post.color }} />
                     <div className="aspect-video bg-muted relative overflow-hidden">
