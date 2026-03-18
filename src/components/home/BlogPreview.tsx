@@ -21,7 +21,7 @@ const BlogPreview = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {blogPosts.slice(0, 3).map((post, i) => (
           <AnimatedSection key={post.id} delay={i * 0.1}>
-            <Link to="/blog" className="block group">
+            <Link to={`/blog/${post.slug}`} className="block group">
               <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300">
                 {/* Thumbnail */}
                 <div className="relative h-48 overflow-hidden">

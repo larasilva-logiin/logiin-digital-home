@@ -66,9 +66,11 @@ const Blog = () => {
                   <span>{featured.date}</span>
                   <span className="flex items-center gap-1"><Clock size={12} /> {featured.readTime}</span>
                 </div>
-                <Button className="mt-4 w-fit font-semibold rounded-full">
-                  Ler artigo
-                </Button>
+                <Link to={`/blog/${featured.slug}`}>
+                  <Button className="mt-4 w-fit font-semibold rounded-full">
+                    Ler artigo
+                  </Button>
+                </Link>
               </div>
             </div>
           </AnimatedSection>
@@ -102,6 +104,7 @@ const Blog = () => {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
                 >
+                  <Link to={`/blog/${post.slug}`} className="block">
                   <div className="bg-card rounded-xl border border-border overflow-hidden group hover:shadow-lg transition-all duration-300">
                     <div className="h-2" style={{ backgroundColor: post.color }} />
                     <div className="aspect-video bg-muted relative overflow-hidden">
@@ -130,6 +133,7 @@ const Blog = () => {
                       </div>
                     </div>
                   </div>
+                  </Link>
                 </motion.div>
               ))}
             </AnimatePresence>
