@@ -1,4 +1,4 @@
-import { Camera, DoorOpen, Home, Bell, Network, Headset } from "lucide-react";
+import { Camera, DoorOpen, Home, Bell, Network, Wrench } from "lucide-react";
 
 export const solutions = [
   {
