@@ -16,7 +16,7 @@ const images: Record<string, string> = {
   automacao: solAutomacao,
   alarmes: solAlarmes,
   redes: solRedes,
-  suporte: solSuporte,
+  outros: solSuporte,
 };
 
 const SolutionsAccordion = () => {
