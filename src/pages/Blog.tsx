@@ -66,9 +66,11 @@ const Blog = () => {
                   <span>{featured.date}</span>
                   <span className="flex items-center gap-1"><Clock size={12} /> {featured.readTime}</span>
                 </div>
-                <Button className="mt-4 w-fit font-semibold rounded-full">
-                  Ler artigo
-                </Button>
+                <Link to={`/blog/${featured.slug}`}>
+                  <Button className="mt-4 w-fit font-semibold rounded-full">
+                    Ler artigo
+                  </Button>
+                </Link>
               </div>
             </div>
           </AnimatedSection>
