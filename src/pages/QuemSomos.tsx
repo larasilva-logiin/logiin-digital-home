@@ -57,17 +57,17 @@ const QuemSomos = () => (
               Nossa História
             </span>
             <h2 className="text-3xl font-extrabold mt-2 mb-6" style={{ color: "hsl(160, 30%, 20%)" }}>
-              Do coração da Amazônia para todo o Brasil
+              Cuidando do que importa, perto de você
             </h2>
             <div className="space-y-4 leading-relaxed" style={{ color: "hsl(160, 10%, 40%)" }}>
               <p>
-                A Logiin nasceu em Manaus, no coração da floresta, com a missão de mostrar que tecnologia de ponta e atendimento humanizado podem caminhar juntos. Fundada por profissionais apaixonados por inovação, a empresa começou pequena, mas com uma visão gigante.
+                A Logiin nasceu em Manaus com um objetivo claro: oferecer soluções de segurança e automação que realmente funcionam no dia a dia.
               </p>
               <p>
-                Acreditamos que segurança não é luxo — é direito. Por isso, desde o primeiro dia trabalhamos para oferecer soluções acessíveis e de alta qualidade, adaptadas à realidade de cada cliente, seja uma residência simples ou um grande empreendimento.
+                Fundada por uma mulher apaixonada por tecnologia, a empresa surgiu da vontade de tornar esse mercado mais acessível, simples e próximo das pessoas, sem complicação e sem promessas vazias.
               </p>
               <p>
-                Hoje, com mais de 500 clientes ativos e uma equipe dedicada, seguimos crescendo com o mesmo propósito: proteger e conectar pessoas com tecnologia que realmente faz diferença.
+                Desde o início, o foco é entender a necessidade de cada cliente e entregar soluções práticas, bem planejadas e que façam sentido para a realidade de cada espaço, seja uma casa ou um negócio.
               </p>
             </div>
           </AnimatedSection>
