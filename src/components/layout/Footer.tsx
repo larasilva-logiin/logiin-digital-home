@@ -19,7 +19,7 @@ const Footer = () =>
             {[
           { icon: Instagram, href: "https://www.instagram.com/logiin.automacao?igsh=MWZibjV6ODh6ajdsaA%3D%3D&utm_source=qr", label: "Instagram" },
           { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: MessageCircle, href: "https://wa.me/5592982122563", label: "WhatsApp" }].
+          { icon: MessageCircle, href: "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site", label: "WhatsApp" }].
           map(({ icon: Icon, href, label }) =>
           <a
             key={label}

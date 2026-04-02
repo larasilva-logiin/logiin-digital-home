@@ -81,7 +81,7 @@ const ContactPage = () => {
           <AnimatedSection delay={0.2}>
             <div className="grid sm:grid-cols-3 gap-4">
               <a
-                href="https://wa.me/5592982122563"
+                href="https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all duration-300"

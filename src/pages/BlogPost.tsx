@@ -4,7 +4,7 @@ import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
-const WHATSAPP_URL = "https://wa.me/5592991741848";
+const WHATSAPP_URL = "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site";
 
 const BlogPost = () => {
   const { slug } = useParams();
