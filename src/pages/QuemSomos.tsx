@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, ShieldCheck, Star, Heart, Leaf, TreePine, MapPin } from "lucide-react";
+import { Lightbulb, ShieldCheck, Star, Heart, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import florestaHero from "@/assets/floresta-amazonica.jpg";
 import manausAerea from "@/assets/manaus-aerea.jpg";
@@ -21,13 +21,6 @@ const QuemSomos = () => (
       <div className="absolute inset-0">
         <img src={florestaHero} alt="Floresta Amazônica" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
-      </div>
-      {/* Decorative leaves */}
-      <div className="absolute top-10 right-10 opacity-10">
-        <Leaf size={120} className="text-white" />
-      </div>
-      <div className="absolute bottom-10 left-10 opacity-10">
-        <TreePine size={100} className="text-white" />
       </div>
       <div className="container-max text-center relative z-10">
         <AnimatedSection>
