@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, ShieldCheck, Star, Heart, Leaf, TreePine, MapPin } from "lucide-react";
+import { Lightbulb, ShieldCheck, Star, Heart, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import florestaHero from "@/assets/floresta-amazonica.jpg";
 import manausAerea from "@/assets/manaus-aerea.jpg";
