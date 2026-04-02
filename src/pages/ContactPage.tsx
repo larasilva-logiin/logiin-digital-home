@@ -23,7 +23,7 @@ const ContactPage = () => {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("contato@logiin.com.br");
+    navigator.clipboard.writeText("logiin.automacao@gmail.com");
     setCopied(true);
     toast.success("E-mail copiado!");
     setTimeout(() => setCopied(false), 2000);
