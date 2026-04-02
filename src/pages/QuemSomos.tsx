@@ -22,13 +22,6 @@ const QuemSomos = () => (
         <img src={florestaHero} alt="Floresta Amazônica" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
-      {/* Decorative leaves */}
-      <div className="absolute top-10 right-10 opacity-10">
-        <Leaf size={120} className="text-white" />
-      </div>
-      <div className="absolute bottom-10 left-10 opacity-10">
-        <TreePine size={100} className="text-white" />
-      </div>
       <div className="container-max text-center relative z-10">
         <AnimatedSection>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 backdrop-blur-sm">
