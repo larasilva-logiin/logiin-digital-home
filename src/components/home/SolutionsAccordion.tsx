@@ -35,8 +35,8 @@ const SolutionsAccordion = () => {
           </p>
         </AnimatedSection>
 
-        {/* Cards row */}
-        <div className="flex gap-3 h-[420px] sm:h-[480px] mb-8">
+        {/* Cards row — stacks vertically on mobile */}
+        <div className="hidden sm:flex gap-3 h-[480px] mb-8">
           {solutions.map((sol, i) => {
             const isActive = i === active;
             return (
@@ -53,17 +53,14 @@ const SolutionsAccordion = () => {
                   alt={sol.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                {/* Dark overlay for inactive */}
                 <motion.div
                   className="absolute inset-0 bg-black"
                   animate={{ opacity: isActive ? 0 : 0.65 }}
                   transition={{ duration: 0.4 }}
                 />
-                {/* Gradient overlay for active */}
                 {isActive && (
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 )}
-                {/* Vertical label for inactive */}
                 {!isActive && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-white/80 font-semibold text-sm [writing-mode:vertical-lr] rotate-180 tracking-wider">
@@ -71,21 +68,78 @@ const SolutionsAccordion = () => {
                     </span>
                   </div>
                 )}
-                {/* Active content overlay */}
                 {isActive && (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.4 }}
-                    className="absolute bottom-0 left-0 right-0 p-6 sm:p-8"
+                    className="absolute bottom-0 left-0 right-0 p-8"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <sol.icon size={24} className="text-primary" />
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+                      <h3 className="text-2xl font-extrabold text-white">
                         {sol.title}
                       </h3>
                     </div>
-                    <p className="text-white/70 text-sm sm:text-base max-w-md leading-relaxed">
+                    <p className="text-white/70 text-base max-w-md leading-relaxed">
+                      {sol.short}
+                    </p>
+                  </motion.div>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Mobile: vertical card list */}
+        <div className="flex flex-col gap-3 sm:hidden mb-8">
+          {solutions.map((sol, i) => {
+            const isActive = i === active;
+            return (
+              <motion.div
+                key={sol.id}
+                onClick={() => setActive(i)}
+                className="relative rounded-2xl overflow-hidden cursor-pointer"
+                animate={{ height: isActive ? 220 : 56 }}
+                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              >
+                <img
+                  src={images[sol.id]}
+                  alt={sol.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <motion.div
+                  className="absolute inset-0 bg-black"
+                  animate={{ opacity: isActive ? 0.3 : 0.65 }}
+                  transition={{ duration: 0.4 }}
+                />
+                {isActive && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                )}
+                {!isActive && (
+                  <div className="absolute inset-0 flex items-center px-5">
+                    <div className="flex items-center gap-3">
+                      <sol.icon size={18} className="text-primary" />
+                      <span className="text-white/90 font-semibold text-sm">
+                        {sol.title}
+                      </span>
+                    </div>
+                  </div>
+                )}
+                {isActive && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.15, duration: 0.3 }}
+                    className="absolute bottom-0 left-0 right-0 p-5"
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <sol.icon size={20} className="text-primary" />
+                      <h3 className="text-lg font-extrabold text-white">
+                        {sol.title}
+                      </h3>
+                    </div>
+                    <p className="text-white/70 text-sm leading-relaxed">
                       {sol.short}
                     </p>
                   </motion.div>
