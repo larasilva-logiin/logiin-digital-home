@@ -101,7 +101,7 @@ const ContactPage = () => {
                   <Mail size={24} className="text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground text-sm mb-1">E-mail</h3>
-                <p className="text-xs text-muted-foreground mb-3">contato@logiin.com.br</p>
+                <p className="text-xs text-muted-foreground mb-3"><p className="text-xs text-muted-foreground mb-3">logiin.automacao@gmail.com</p></p>
                 <Button
                   variant="outline"
                   size="sm"
