@@ -114,7 +114,7 @@ const ContactPage = () => {
               </div>
 
               <a
-                href="https://instagram.com/logiin"
+                href="https://www.instagram.com/logiin.automacao/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-card rounded-xl border border-border p-6 text-center hover:shadow-lg transition-all duration-300"
