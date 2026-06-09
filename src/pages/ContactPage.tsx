@@ -46,7 +46,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="container-max max-w-3xl">
           {/* Form */}
           <AnimatedSection>

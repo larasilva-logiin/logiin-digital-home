@@ -42,17 +42,17 @@ const QuemSomos = () => (
     </section>
 
     {/* Nossa História */}
-    <section className="section-padding" style={{ backgroundColor: "hsl(40, 25%, 98%)" }}>
+    <section className="section-padding bg-background">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <AnimatedSection>
-            <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: "hsl(160, 50%, 40%)" }}>
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
               Nossa História
             </span>
-            <h2 className="text-3xl font-extrabold mt-2 mb-6" style={{ color: "hsl(160, 30%, 20%)" }}>
+            <h2 className="text-3xl font-extrabold mt-2 mb-6 text-foreground">
               Cuidando do que importa, perto de você
             </h2>
-            <div className="space-y-4 leading-relaxed" style={{ color: "hsl(160, 10%, 40%)" }}>
+            <div className="space-y-4 leading-relaxed text-muted-foreground">
               <p>
                 A Logiin nasceu em Manaus com um objetivo claro: oferecer soluções de segurança e automação que realmente funcionam no dia a dia.
               </p>
@@ -66,7 +66,7 @@ const QuemSomos = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <div className="rounded-3xl overflow-hidden border-2 border-emerald-100 shadow-xl">
+            <div className="rounded-3xl overflow-hidden border-2 border-border shadow-xl">
               <img src={manausAerea} alt="Vista aérea de Manaus" className="w-full aspect-[4/3] object-cover" />
             </div>
           </AnimatedSection>
@@ -76,13 +76,13 @@ const QuemSomos = () => (
 
 
     {/* Valores */}
-    <section className="section-padding" style={{ backgroundColor: "hsl(40, 25%, 98%)" }}>
+    <section className="section-padding bg-muted/30">
       <div className="container-max">
         <AnimatedSection className="text-center mb-14">
-          <h2 className="text-3xl font-extrabold" style={{ color: "hsl(160, 30%, 20%)" }}>
+          <h2 className="text-3xl font-extrabold text-foreground">
             Nossos Valores
           </h2>
-          <p className="mt-3 max-w-lg mx-auto" style={{ color: "hsl(160, 10%, 50%)" }}>
+          <p className="mt-3 max-w-lg mx-auto text-muted-foreground">
             Os pilares que guiam cada decisão e cada projeto que entregamos
           </p>
         </AnimatedSection>
@@ -91,14 +91,14 @@ const QuemSomos = () => (
             const Icon = v.icon;
             return (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="group relative bg-white rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-emerald-50">
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="group relative bg-card rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative z-10">
                     <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                       <Icon size={28} className="text-white" />
                     </div>
-                    <h3 className="font-bold text-lg mb-3" style={{ color: "hsl(160, 30%, 25%)" }}>{v.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "hsl(160, 10%, 50%)" }}>{v.desc}</p>
+                    <h3 className="font-bold text-lg mb-3 text-foreground">{v.title}</h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
