@@ -112,7 +112,7 @@ const Home = () => {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="container-max">
           <AnimatedSection className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">

@@ -63,7 +63,7 @@ const BlogPost = () => {
       </section>
 
       {/* Content */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="container-max max-w-3xl">
           <AnimatedSection>
             <article className="prose prose-lg max-w-none">

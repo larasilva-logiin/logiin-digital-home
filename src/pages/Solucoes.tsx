@@ -33,7 +33,7 @@ const Solucoes = () => {
       </section>
 
       {/* Filter + Cards */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="container-max">
           <div className="flex flex-wrap gap-2 mb-10">
             {solutionCategories.map((cat) => (
@@ -114,7 +114,7 @@ const Solucoes = () => {
             <h3 className="text-xl font-bold text-foreground mb-6">Equipamentos das melhores marcas</h3>
             <div className="flex flex-wrap justify-center gap-8">
               {["Intelbras", "Hikvision", "Dahua", "Axis", "Bosch", "Honeywell"].map((brand) => (
-                <div key={brand} className="w-28 h-12 rounded-lg bg-white border border-border flex items-center justify-center text-sm font-semibold text-muted-foreground">
+                <div key={brand} className="w-28 h-12 rounded-lg bg-card border border-border flex items-center justify-center text-sm font-semibold text-muted-foreground">
                   {brand}
                 </div>
               ))}

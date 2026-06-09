@@ -42,7 +42,7 @@ const Blog = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="container-max">
           {/* Featured */}
           <AnimatedSection className="mb-14">

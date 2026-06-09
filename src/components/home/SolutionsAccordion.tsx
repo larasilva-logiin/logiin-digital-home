@@ -24,7 +24,7 @@ const SolutionsAccordion = () => {
   const activeSol = solutions[active];
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
+    <section className="section-padding bg-background overflow-hidden">
       <div className="container-max">
         <AnimatedSection className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
