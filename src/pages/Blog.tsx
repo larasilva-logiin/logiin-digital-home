@@ -57,7 +57,7 @@ const Blog = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-navy/40 to-transparent" />
                 <div className="absolute top-4 left-4">
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/90 text-foreground">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white text-navy shadow-md">
                     Destaque
                   </span>
                 </div>
@@ -100,7 +100,7 @@ const Blog = () => {
           </div>
 
           {/* Grid */}
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14 items-stretch">
             <AnimatePresence mode="popLayout">
               {filtered.map((post) => (
                 <motion.div
@@ -110,9 +110,10 @@ const Blog = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
+                  className="h-full"
                 >
-                  <Link to={`/blog/${post.slug}`} className="block">
-                  <div className="bg-card rounded-xl border border-border overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <Link to={`/blog/${post.slug}`} className="block h-full">
+                  <div className="bg-card rounded-xl border border-border overflow-hidden group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                     <div className="h-2" style={{ backgroundColor: post.color }} />
                     <div className="aspect-video bg-muted relative overflow-hidden">
                       <img
@@ -124,15 +125,15 @@ const Blog = () => {
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="p-5">
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ backgroundColor: `${post.color}15`, color: post.color }}>
+                    <div className="p-5 flex flex-col flex-1">
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full w-fit" style={{ backgroundColor: `${post.color}15`, color: post.color }}>
                         {post.category}
                       </span>
-                      <h3 className="font-semibold text-foreground mt-3 mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-foreground mt-3 mb-2 group-hover:text-primary transition-colors line-clamp-2 min-h-[3rem]">
                         {post.title}
                       </h3>
                       <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{post.excerpt}</p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <div className="flex items-center justify-between text-xs text-muted-foreground mt-auto">
                         <div className="flex items-center gap-3">
                           <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-[10px] font-bold text-primary">
                             {post.author[0]}
