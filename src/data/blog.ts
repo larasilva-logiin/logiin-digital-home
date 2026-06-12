@@ -1,3 +1,10 @@
+import cftvImg from "@/assets/blog/cftv.jpg";
+import automacaoImg from "@/assets/blog/automacao.jpg";
+import alarmeImg from "@/assets/blog/alarme.jpg";
+import fechaduraImg from "@/assets/blog/fechadura.jpg";
+import videoporteiroImg from "@/assets/blog/videoporteiro.jpg";
+import casaInteligenteImg from "@/assets/blog/casa-inteligente.jpg";
+
 export interface BlogPost {
   id: number;
   slug: string;
@@ -8,6 +15,7 @@ export interface BlogPost {
   readTime: string;
   date: string;
   color: string;
+  image: string;
   content: BlogSection[];
 }
 
@@ -28,6 +36,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min",
     date: "10 Mar 2025",
     color: "hsl(190, 100%, 43%)",
+    image: cftvImg,
     content: [
       { type: "paragraph", text: "Se você já pensou em instalar câmeras em casa ou no seu negócio, provavelmente se deparou com essa dúvida: preciso mesmo de um sistema de CFTV ou uma câmera comum resolve? A resposta curta é: depende do que você precisa. Mas entender a diferença vai te ajudar a fazer a escolha certa." },
       { type: "heading", text: "O que é CFTV?" },
@@ -55,6 +64,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min",
     date: "05 Mar 2025",
     color: "hsl(105, 64%, 33%)",
+    image: automacaoImg,
     content: [
       { type: "paragraph", text: "Automatizar a casa já não é coisa de ficção científica. Em 2026, a tecnologia está mais acessível, mais intuitiva e mais integrada do que nunca. Mas por que investir agora?" },
       { type: "heading", text: "1. Segurança com mais controle" },
@@ -81,6 +91,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min",
     date: "28 Fev 2025",
     color: "hsl(204, 100%, 9%)",
+    image: alarmeImg,
     content: [
       { type: "paragraph", text: "Um alarme que toca mas ninguém atende — você já viu isso acontecer. O alarme monitorado é diferente: quando ele dispara, alguém age." },
       { type: "heading", text: "Como funciona?" },
@@ -103,6 +114,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min",
     date: "20 Fev 2025",
     color: "hsl(190, 100%, 43%)",
+    image: fechaduraImg,
     content: [
       { type: "paragraph", text: "Chave perdida, cópia para vários moradores, preocupação com quem tem acesso. A fechadura eletrônica resolve tudo isso — mas qual modelo é o certo para você?" },
       { type: "heading", text: "Primeiro: pense no método de acesso" },
@@ -136,6 +148,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min",
     date: "15 Fev 2025",
     color: "hsl(105, 64%, 33%)",
+    image: videoporteiroImg,
     content: [
       { type: "paragraph", text: "Você já abriu a porta sem saber quem estava do outro lado? O vídeo porteiro resolve isso — e faz muito mais do que um interfone com câmera." },
       { type: "heading", text: "O que é e como funciona?" },
@@ -167,6 +180,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min",
     date: "10 Fev 2025",
     color: "hsl(204, 100%, 9%)",
+    image: casaInteligenteImg,
     content: [
       { type: "paragraph", text: "A ideia de ter uma casa inteligente pode parecer complexa — mas na prática, você provavelmente já tem o primeiro passo na sua mão: o celular. Uma casa inteligente é aquela em que os dispositivos se conectam e podem ser controlados de um único lugar. Não precisa fazer tudo de uma vez. O segredo é começar com o que faz mais sentido para a sua rotina." },
       { type: "heading", text: "Comece pelas prioridades" },

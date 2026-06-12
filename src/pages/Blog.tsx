@@ -48,7 +48,14 @@ const Blog = () => {
           <AnimatedSection className="mb-14">
             <div className="bg-card rounded-xl border border-border overflow-hidden grid md:grid-cols-2 gap-0">
               <div className="aspect-video md:aspect-auto relative overflow-hidden" style={{ minHeight: 200 }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/10" />
+                <img
+                  src={featured.image}
+                  alt={featured.title}
+                  width={1024}
+                  height={1024}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-navy/40 to-transparent" />
                 <div className="absolute top-4 left-4">
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/90 text-foreground">
                     Destaque
@@ -108,7 +115,14 @@ const Blog = () => {
                   <div className="bg-card rounded-xl border border-border overflow-hidden group hover:shadow-lg transition-all duration-300">
                     <div className="h-2" style={{ backgroundColor: post.color }} />
                     <div className="aspect-video bg-muted relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 group-hover:scale-105 transition-transform duration-500" />
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        loading="lazy"
+                        width={1024}
+                        height={1024}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
                     <div className="p-5">
                       <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ backgroundColor: `${post.color}15`, color: post.color }}>
