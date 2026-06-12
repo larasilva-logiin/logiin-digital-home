@@ -6,10 +6,10 @@ import florestaHero from "@/assets/floresta-amazonica.jpg";
 import manausAerea from "@/assets/manaus-aerea.jpg";
 
 const values = [
-  { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", color: "from-emerald-400 to-teal-500" },
-  { icon: ShieldCheck, title: "Confiança", desc: "Construímos relações duradouras com honestidade e transparência em cada projeto.", color: "from-sky-400 to-blue-500" },
-  { icon: Star, title: "Qualidade", desc: "Entregamos excelência em cada instalação, com equipamentos certificados e garantia.", color: "from-emerald-400 to-teal-500" },
-  { icon: Heart, title: "Atendimento humanizado", desc: "Cada cliente é único. Ouvimos, entendemos e personalizamos cada solução.", color: "from-amber-400 to-orange-400" },
+  { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", gradient: "from-emerald-400 to-teal-500", ring: "ring-emerald-400/30" },
+  { icon: ShieldCheck, title: "Confiança", desc: "Construímos relações duradouras com honestidade e transparência em cada projeto.", gradient: "from-sky-400 to-blue-500", ring: "ring-sky-400/30" },
+  { icon: Star, title: "Qualidade", desc: "Entregamos excelência em cada instalação, com equipamentos certificados e garantia.", gradient: "from-fuchsia-400 to-purple-500", ring: "ring-fuchsia-400/30" },
+  { icon: Heart, title: "Atendimento humanizado", desc: "Cada cliente é único. Ouvimos, entendemos e personalizamos cada solução.", gradient: "from-amber-400 to-orange-500", ring: "ring-amber-400/30" },
 ];
 
 
@@ -86,16 +86,21 @@ const QuemSomos = () => (
             Os pilares que guiam cada decisão e cada projeto que entregamos
           </p>
         </AnimatedSection>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {values.map((v, i) => {
             const Icon = v.icon;
             return (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="group relative bg-card rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border">
+              <AnimatedSection key={i} delay={i * 0.1} className="h-full">
+                <div className="group relative bg-card rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border h-full flex flex-col">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative z-10">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon size={28} className="text-white" />
+                  <div className="relative z-10 flex flex-col h-full">
+                    {/* Custom layered icon badge */}
+                    <div className="relative mx-auto mb-6 w-20 h-20 flex items-center justify-center">
+                      <div className={`absolute inset-0 rounded-[28%] bg-gradient-to-br ${v.gradient} rotate-6 opacity-30 blur-md group-hover:rotate-12 transition-transform duration-500`} />
+                      <div className={`absolute inset-1 rounded-[28%] bg-gradient-to-br ${v.gradient} opacity-20`} />
+                      <div className={`relative w-16 h-16 rounded-[28%] bg-gradient-to-br ${v.gradient} flex items-center justify-center shadow-xl ring-4 ${v.ring} group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500`}>
+                        <Icon size={28} className="text-white" strokeWidth={2.4} />
+                      </div>
                     </div>
                     <h3 className="font-bold text-lg mb-3 text-foreground">{v.title}</h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
