@@ -65,6 +65,17 @@ const BlogPost = () => {
       {/* Content */}
       <section className="section-padding bg-background">
         <div className="container-max max-w-3xl">
+          <AnimatedSection className="mb-10 -mt-4">
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border">
+              <img
+                src={post.image}
+                alt={post.title}
+                width={1024}
+                height={1024}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </AnimatedSection>
           <AnimatedSection>
             <article className="prose prose-lg max-w-none">
               {post.content.map((section, i) => {
