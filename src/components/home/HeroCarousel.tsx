@@ -37,9 +37,10 @@ const HeroCarousel = () => {
           <img
             src={slides[current]}
             alt="Logiin"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--navy)/0.92)] via-[hsl(var(--navy)/0.75)] to-[hsl(var(--navy)/0.5)]" />
+          {/* Stronger vertical gradient on mobile for readability, horizontal on desktop */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--navy)/0.85)] via-[hsl(var(--navy)/0.7)] to-[hsl(var(--navy)/0.85)] sm:bg-gradient-to-r sm:from-[hsl(var(--navy)/0.92)] sm:via-[hsl(var(--navy)/0.75)] sm:to-[hsl(var(--navy)/0.5)]" />
         </motion.div>
       </AnimatePresence>
 
