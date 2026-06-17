@@ -5,9 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
-import heroMobile1 from "@/assets/hero-mobile-1.jpg";
-import heroMobile2 from "@/assets/hero-mobile-2.jpg";
-import heroMobile3 from "@/assets/hero-mobile-3.jpg";
+import heroMobile1Asset from "@/assets/hero-mobile-1.png.asset.json";
+import heroMobile2Asset from "@/assets/hero-mobile-2.png.asset.json";
+import heroMobile3Asset from "@/assets/hero-mobile-3.png.asset.json";
+
+const heroMobile1 = heroMobile1Asset.url;
+const heroMobile2 = heroMobile2Asset.url;
+const heroMobile3 = heroMobile3Asset.url;
 
 const slides = [
   { desktop: hero1, mobile: heroMobile1 },
