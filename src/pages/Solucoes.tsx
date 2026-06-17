@@ -51,7 +51,7 @@ const Solucoes = () => {
             ))}
           </div>
 
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             <AnimatePresence mode="popLayout">
               {filtered.map((sol) => {
                 const Icon = sol.icon;
@@ -64,8 +64,9 @@ const Solucoes = () => {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
                     id={sol.id}
+                    className="h-full"
                   >
-                    <div className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow h-full flex flex-col">
                       <div className="flex items-start gap-4 mb-4">
                         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                           <Icon size={24} className="text-primary" />
@@ -81,7 +82,7 @@ const Solucoes = () => {
                           </div>
                         </div>
                       </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">{sol.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow">{sol.description}</p>
                       <div className="mb-4">
                         <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Benefícios</h4>
                         <ul className="space-y-1.5">
@@ -93,7 +94,7 @@ const Solucoes = () => {
                           ))}
                         </ul>
                       </div>
-                      <Link to="/contato">
+                      <Link to="/contato" className="mt-auto">
                         <Button size="sm" className="font-semibold rounded-full">
                           Ver detalhes
                         </Button>
@@ -104,22 +105,6 @@ const Solucoes = () => {
               })}
             </AnimatePresence>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Brands */}
-      <section className="section-padding bg-light-gray">
-        <div className="container-max text-center">
-          <AnimatedSection>
-            <h3 className="text-xl font-bold text-foreground mb-6">Equipamentos das melhores marcas</h3>
-            <div className="flex flex-wrap justify-center gap-8">
-              {["Intelbras", "Hikvision", "Dahua", "Axis", "Bosch", "Honeywell"].map((brand) => (
-                <div key={brand} className="w-28 h-12 rounded-lg bg-card border border-border flex items-center justify-center text-sm font-semibold text-muted-foreground">
-                  {brand}
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
