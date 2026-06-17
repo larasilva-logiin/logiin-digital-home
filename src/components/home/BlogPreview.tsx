@@ -20,11 +20,11 @@ const BlogPreview = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {blogPosts.slice(0, 3).map((post, i) => (
-          <AnimatedSection key={post.id} delay={i * 0.1}>
-            <Link to={`/blog/${post.slug}`} className="block group">
-              <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300">
+          <AnimatedSection key={post.id} delay={i * 0.1} className="h-full">
+            <Link to={`/blog/${post.slug}`} className="block group h-full">
+              <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                 {/* Thumbnail */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <img
                     src={blogImages[i]}
                     alt={post.title}
@@ -40,14 +40,14 @@ const BlogPreview = () => (
                   </div>
                 </div>
                 {/* Content */}
-                <div className="p-5">
-                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2 min-h-[3rem]">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                  <p className="text-sm text-muted-foreground line-clamp-2 mb-3 min-h-[2.5rem]">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground mt-auto">
                     <span>{post.date}</span>
                     <span>·</span>
                     <span>{post.readTime}</span>

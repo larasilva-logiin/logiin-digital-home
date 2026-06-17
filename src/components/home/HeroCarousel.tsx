@@ -5,8 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
+import heroMobile1 from "@/assets/hero-mobile-1.jpg";
+import heroMobile2 from "@/assets/hero-mobile-2.jpg";
+import heroMobile3 from "@/assets/hero-mobile-3.jpg";
 
-const slides = [hero1, hero2, hero3];
+const slides = [
+  { desktop: hero1, mobile: heroMobile1 },
+  { desktop: hero2, mobile: heroMobile2 },
+  { desktop: hero3, mobile: heroMobile3 },
+];
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -34,11 +41,14 @@ const HeroCarousel = () => {
           transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
-          <img
-            src={slides[current]}
-            alt="Logiin"
-            className="w-full h-full object-cover object-center"
-          />
+          <picture>
+            <source media="(max-width: 640px)" srcSet={slides[current].mobile} />
+            <img
+              src={slides[current].desktop}
+              alt="Logiin"
+              className="w-full h-full object-cover object-center"
+            />
+          </picture>
           {/* Stronger vertical gradient on mobile for readability, horizontal on desktop */}
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--navy)/0.85)] via-[hsl(var(--navy)/0.7)] to-[hsl(var(--navy)/0.85)] sm:bg-gradient-to-r sm:from-[hsl(var(--navy)/0.92)] sm:via-[hsl(var(--navy)/0.75)] sm:to-[hsl(var(--navy)/0.5)]" />
         </motion.div>

@@ -1,4 +1,4 @@
-import { Camera, DoorOpen, Home, Bell, Network, Wrench } from "lucide-react";
+import { Camera, DoorOpen, Home, Bell, Cable, Wrench } from "lucide-react";
 
 export const solutions = [
   {
@@ -83,22 +83,22 @@ export const solutions = [
   },
   {
     id: "redes",
-    icon: Network,
-    title: "Redes e Cabeamento",
-    short: "Infraestrutura de rede profissional e cabeamento estruturado",
-    description: "Projetos completos de infraestrutura de rede com cabeamento estruturado, Wi-Fi corporativo e soluções de conectividade. Garantimos performance, estabilidade e escalabilidade para sua empresa ou residência.",
+    icon: Cable,
+    title: "Cabeamento Estruturado",
+    short: "Cabeamento organizado e padronizado para segurança e automação",
+    description: "Organizamos e padronizamos o cabeamento de sistemas de segurança, automação e infraestrutura, garantindo instalações mais limpas, seguras e fáceis de manter. Uma estrutura organizada reduz falhas, agiliza manutenções e valoriza o ambiente residencial ou corporativo.",
     segments: ["Empresarial", "Condomínio"],
     steps: [
-      "Avaliamos a necessidade de rede e pontos de conexão",
-      "Projetamos o cabeamento estruturado com certificação",
-      "Instalamos e testamos todos os pontos com garantia de performance",
+      "Avaliamos a infraestrutura existente e os pontos a serem conectados",
+      "Planejamos o cabeamento padronizado para CFTV, automação e controle de acesso",
+      "Instalamos com acabamento profissional, identificação e organização em rack",
     ],
     benefits: [
-      "Cabeamento certificado Cat5e/Cat6",
-      "Wi-Fi corporativo de alta performance",
-      "Organização profissional de rack",
-      "Escalabilidade para crescimento",
-      "Acompanhamento técnico especializado",
+      "Instalações limpas e organizadas",
+      "Padronização e identificação dos cabos",
+      "Menos falhas e manutenção mais rápida",
+      "Infraestrutura preparada para expansões futuras",
+      "Acabamento profissional em rack e pontos de conexão",
     ],
   },
   {

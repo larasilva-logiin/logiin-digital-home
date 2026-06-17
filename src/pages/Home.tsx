@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Shield, Wifi, Users, Clock, CheckCircle } from "lucide-react";
+import { Shield, Layers, Users, Clock, CheckCircle } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import HeroCarousel from "@/components/home/HeroCarousel";
@@ -49,7 +49,7 @@ const Home = () => {
     { icon: Shield, title: "Equipamentos certificados", desc: "Trabalhamos com marcas homologadas e certificadas pela Anatel" },
     { icon: Users, title: "Equipe especializada", desc: "Técnicos treinados e certificados nas melhores tecnologias" },
     { icon: Clock, title: "Suporte dedicado", desc: "Acompanhamento e suporte contínuo para sua tranquilidade" },
-    { icon: Wifi, title: "Integração total", desc: "Todos os sistemas conectados e gerenciados em um só lugar" },
+    { icon: Layers, title: "Integração total", desc: "Segurança, automação e acesso conectados em uma só plataforma" },
   ];
 
   const howSteps = [
