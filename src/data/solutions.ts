@@ -4,9 +4,9 @@ export const solutions = [
   {
     id: "cftv",
     icon: Camera,
-    title: "CFTV",
-    short: "Câmeras de alta resolução com acesso remoto",
-    description: "Sistemas profissionais de CFTV com câmeras IP de alta definição, gravação contínua em nuvem e acesso remoto pelo smartphone. Acompanhe seu patrimônio de qualquer lugar do mundo com imagens nítidas e alertas inteligentes.",
+    title: "Câmeras de Segurança (CFTV)",
+    short: "Instalação profissional de câmeras com acesso pelo celular",
+    description: "Instalação profissional de câmeras de segurança em Manaus para residências, empresas e condomínios. Equipamentos Intelbras e Hikvision, gravação contínua, acesso remoto pelo celular e garantia na instalação.",
     segments: ["Residencial", "Empresarial", "Condomínio"],
     steps: [
       "Diagnóstico completo dos pontos críticos de segurança",
