@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, Star, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import SolutionsAccordion from "@/components/home/SolutionsAccordion";
@@ -16,36 +15,6 @@ import {
 
 const WHATSAPP_URL =
   "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site";
-
-/* ── Counter ── */
-const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          const steps = 40;
-          const inc = target / steps;
-          let cur = 0;
-          const timer = setInterval(() => {
-            cur += inc;
-            if (cur >= target) { setCount(target); clearInterval(timer); }
-            else setCount(Math.floor(cur));
-          }, 1500 / steps);
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [target]);
-
-  return <span ref={ref}>{count}{suffix}</span>;
-};
 
 const Home = () => {
   const whyItems = [
