@@ -63,30 +63,35 @@ const HeroCarousel = () => {
         <div className="container-max px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-6">
-              Segurança & Automação
+              Especialistas em CFTV em Manaus
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white leading-[1.1] mb-6">
-              Conectividade inteligente que{" "}
-              <span className="text-gradient">protege o que importa</span>
+              Instalação de{" "}
+              <span className="text-gradient">Câmeras de Segurança</span>{" "}
+              em Manaus com Qualidade e Garantia
             </h1>
             <p className="text-lg text-[hsl(210,30%,70%)] max-w-lg mb-8 leading-relaxed">
-              Soluções integradas de CFTV, controle de acesso e automação para residências, condomínios e empresas.
+              Proteja sua residência, empresa ou condomínio com projetos personalizados, equipamentos das melhores marcas e instalação profissional. Solicite um orçamento rápido pelo WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/solucoes">
-                <Button size="lg" className="font-semibold text-base px-8 py-6 rounded-full">
-                  Conheça as Soluções
+              <a
+                href="https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="font-semibold text-base px-8 py-6 rounded-full w-full sm:w-auto">
+                  Solicitar Orçamento
                 </Button>
-              </Link>
-              <Link to="/contato">
+              </a>
+              <a href="#pacotes">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold text-base px-8 py-6 rounded-full"
+                  className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold text-base px-8 py-6 rounded-full w-full sm:w-auto"
                 >
-                  Solicitar Orçamento
+                  Conhecer Nossos Projetos
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
