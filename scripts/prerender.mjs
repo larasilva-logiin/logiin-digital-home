@@ -4,6 +4,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
+const EXECUTABLE_PATH = process.env.PRERENDER_CHROMIUM || undefined;
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, "..", "dist");
 
@@ -80,7 +82,9 @@ async function main() {
   console.log(`[prerender] serving dist at ${baseUrl}`);
   console.log(`[prerender] routes: ${routes.join(", ")}`);
 
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(
+    EXECUTABLE_PATH ? { executablePath: EXECUTABLE_PATH } : {},
+  );
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
 
   for (const route of routes) {
