@@ -19,6 +19,7 @@ const QuemSomos = () => (
     <SEO
       title="Quem Somos | Logiin - Tecnologia e Segurança em Manaus"
       description="Conheça a Logiin: empresa de tecnologia e segurança eletrônica em Manaus, especializada em CFTV, automação e controle de acesso com equipamentos Intelbras e Hikvision."
+      path="/quem-somos"
     />
     {/* Hero — Amazonian warm tones */}
     <section className="relative pt-28 pb-20 px-4 overflow-hidden">

@@ -35,6 +35,7 @@ const ContactPage = () => {
       <SEO
         title="Contato | Fale com a Logiin | Manaus"
         description="Fale com a Logiin pelo WhatsApp e solicite seu orçamento personalizado para instalação de câmeras, alarme ou automação em Manaus."
+        path="/contato"
       />
       {/* Hero */}
       <section className="bg-navy pt-28 pb-12 px-4 text-center">

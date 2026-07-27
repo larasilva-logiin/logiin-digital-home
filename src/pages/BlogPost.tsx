@@ -31,6 +31,7 @@ const BlogPost = () => {
       <SEO
         title={`${post.title} | Blog Logiin`}
         description={post.excerpt}
+        path={`/blog/${post.slug}`}
       />
       {/* Header */}
       <section className="bg-navy pt-28 pb-14 px-4">
