@@ -71,7 +71,7 @@ const HeroCarousel = () => {
               em Manaus com Qualidade e Garantia
             </h1>
             <p className="text-lg text-[hsl(210,30%,70%)] max-w-lg mb-8 leading-relaxed">
-              Proteja sua residência, empresa ou condomínio com projetos personalizados, equipamentos das melhores marcas e instalação profissional. Solicite um orçamento rápido pelo WhatsApp.
+              Proteja sua residência, empresa ou condomínio com projetos personalizados, equipamentos das melhores marcas e instalação profissional. Solicite um orçamento personalizado pelo WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

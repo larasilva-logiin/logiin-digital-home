@@ -30,7 +30,7 @@ const Home = () => {
     { icon: Award, title: "Instaladores especializados", desc: "Equipe técnica treinada com anos de experiência em Manaus." },
     { icon: Smartphone, title: "Acesso pelo celular", desc: "Acompanhe suas câmeras em tempo real de qualquer lugar." },
     { icon: BadgeCheck, title: "Marcas líderes", desc: "Trabalhamos com Intelbras, Hikvision e outras referências do mercado." },
-    { icon: Zap, title: "Orçamento rápido", desc: "Resposta ágil pelo WhatsApp e visita técnica sem compromisso." },
+    { icon: Zap, title: "Orçamento personalizado", desc: "Resposta ágil pelo WhatsApp e visita técnica sem compromisso." },
     { icon: Wrench, title: "Garantia na instalação", desc: "Serviço com garantia e suporte pós-venda dedicado." },
   ];
 
@@ -342,7 +342,7 @@ const Home = () => {
               Pronto para proteger o que é seu em Manaus?
             </h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">
-              Fale com nossos especialistas pelo WhatsApp e receba um orçamento rápido, sem compromisso.
+              Fale com nossos especialistas pelo WhatsApp e receba um orçamento personalizado, sem compromisso.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-base px-8 py-6 rounded-full">
