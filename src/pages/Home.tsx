@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, Star, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import SolutionsAccordion from "@/components/home/SolutionsAccordion";
 import BlogPreview from "@/components/home/BlogPreview";
