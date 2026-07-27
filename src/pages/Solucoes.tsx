@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { solutions, solutionCategories } from "@/data/solutions";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Solucoes = () => {
@@ -15,6 +16,10 @@ const Solucoes = () => {
 
   return (
     <div>
+      <SEO
+        title="Soluções em Segurança Eletrônica: CFTV, Alarme, Automação e Controle de Acesso | Logiin Manaus"
+        description="Conheça todas as soluções da Logiin em Manaus: câmeras de segurança, alarme monitorado, automação residencial, controle de acesso e videoporteiro. Fale com a gente pelo WhatsApp."
+      />
       {/* Hero */}
       <section className="bg-navy pt-28 pb-12 px-4">
         <div className="container-max">
