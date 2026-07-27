@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MessageCircle, Mail, Instagram, Copy, Check, Clock } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { toast } from "sonner";
 import { solutions } from "@/data/solutions";
 
@@ -31,6 +32,10 @@ const ContactPage = () => {
 
   return (
     <div>
+      <SEO
+        title="Contato | Fale com a Logiin | Manaus"
+        description="Fale com a Logiin pelo WhatsApp e solicite seu orçamento personalizado para instalação de câmeras, alarme ou automação em Manaus."
+      />
       {/* Hero */}
       <section className="bg-navy pt-28 pb-12 px-4 text-center">
         <div className="container-max">

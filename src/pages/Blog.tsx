@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { blogPosts, blogCategories } from "@/data/blog";
 import { Clock, User, Search } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Blog = () => {
@@ -18,6 +19,11 @@ const Blog = () => {
   const featured = blogPosts[0];
 
   return (
+    <>
+      <SEO
+        title="Blog | Dicas de Segurança Eletrônica e Automação | Logiin Manaus"
+        description="Artigos sobre câmeras de segurança, alarmes, automação residencial e controle de acesso, com foco em Manaus e região."
+      />
     <div>
       {/* Header */}
       <section className="bg-navy pt-28 pb-12 px-4 text-center">
@@ -177,6 +183,7 @@ const Blog = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
