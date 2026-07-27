@@ -3,6 +3,7 @@ import { blogPosts } from "@/data/blog";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const WHATSAPP_URL = "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site";
 
@@ -27,6 +28,10 @@ const BlogPost = () => {
 
   return (
     <div>
+      <SEO
+        title={`${post.title} | Blog Logiin`}
+        description={post.excerpt}
+      />
       {/* Header */}
       <section className="bg-navy pt-28 pb-14 px-4">
         <div className="container-max max-w-3xl">
