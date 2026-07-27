@@ -23,6 +23,7 @@ const Blog = () => {
       <SEO
         title="Blog | Dicas de Segurança Eletrônica e Automação | Logiin Manaus"
         description="Artigos sobre câmeras de segurança, alarmes, automação residencial e controle de acesso, com foco em Manaus e região."
+        path="/blog"
       />
     <div>
       {/* Header */}
