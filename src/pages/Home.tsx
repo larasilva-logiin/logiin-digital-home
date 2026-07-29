@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, Star, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
+import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import SolutionsAccordion from "@/components/home/SolutionsAccordion";
 import BlogPreview from "@/components/home/BlogPreview";
-import familiaSegura from "@/assets/familia-segura.jpg";
+import familiaSegura from "@/assets/familia-segura.webp";
 import {
   Accordion,
   AccordionContent,
@@ -67,29 +67,6 @@ const Home = () => {
         "Central de monitoramento",
         "Suporte técnico dedicado",
       ],
-    },
-  ];
-
-  const marcas = ["Intelbras", "Hikvision", "Control iD", "PPA", "JFL"];
-
-  const depoimentos = [
-    {
-      nome: "Rafael M.",
-      bairro: "Adrianópolis, Manaus",
-      texto:
-        "Instalação rápida e organizada. As câmeras têm imagem excelente e o app funciona muito bem. Recomendo a Logiin.",
-    },
-    {
-      nome: "Camila F.",
-      bairro: "Ponta Negra, Manaus",
-      texto:
-        "Equipe muito profissional. Fizeram o projeto sob medida para a nossa casa e o cabeamento ficou impecável.",
-    },
-    {
-      nome: "Síndico — Ed. Vista Rio",
-      bairro: "Flores, Manaus",
-      texto:
-        "Modernizamos o CFTV do condomínio com a Logiin. Suporte ágil e imagens muito melhores que o sistema anterior.",
     },
   ];
 
@@ -159,6 +136,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── NOSSAS SOLUÇÕES ── */}
+      <SolutionsAccordion />
+
       {/* ── PACOTES DE CÂMERAS ── */}
       <section id="pacotes" className="section-padding bg-light-gray">
         <div className="container-max">
@@ -213,7 +193,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img src={familiaSegura} alt="Família protegida por sistema de câmeras de segurança instalado em Manaus" className="w-full h-full object-cover" />
+                <img src={familiaSegura} alt="Família protegida por sistema de câmeras de segurança instalado em Manaus pela Logiin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
@@ -249,62 +229,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* ── MARCAS ── */}
-      <section className="py-12 bg-light-gray border-y border-border">
-        <div className="container-max px-4">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-            Tecnologias que utilizamos
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {marcas.map((m) => (
-              <span
-                key={m}
-                className="text-lg sm:text-xl font-bold text-foreground/60 hover:text-foreground transition-colors"
-              >
-                {m}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── DEPOIMENTOS ── */}
-      <section className="section-padding bg-background">
-        <div className="container-max">
-          <AnimatedSection className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
-              O que dizem nossos clientes
-            </h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">
-              Projetos entregues em toda Manaus com nota máxima em atendimento.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            {depoimentos.map((d, i) => (
-              <AnimatedSection key={i} delay={i * 0.1} className="h-full">
-                <div className="h-full bg-card border border-border rounded-xl p-6 flex flex-col">
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(5)].map((_, k) => (
-                      <Star key={k} size={16} className="fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground italic leading-relaxed mb-5 flex-grow">
-                    “{d.texto}”
-                  </p>
-                  <div>
-                    <p className="font-semibold text-foreground text-sm">{d.nome}</p>
-                    <p className="text-xs text-muted-foreground">{d.bairro}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SOLUÇÕES COMPLEMENTARES ── */}
-      <SolutionsAccordion />
 
       {/* ── FAQ ── */}
       <section className="section-padding bg-light-gray">

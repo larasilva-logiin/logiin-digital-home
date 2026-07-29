@@ -1,9 +1,9 @@
-import cftvImg from "@/assets/blog/cftv.jpg";
-import automacaoImg from "@/assets/blog/automacao.jpg";
-import alarmeImg from "@/assets/blog/alarme.jpg";
-import fechaduraImg from "@/assets/blog/fechadura.jpg";
-import videoporteiroImg from "@/assets/blog/videoporteiro.jpg";
-import casaInteligenteImg from "@/assets/blog/casa-inteligente.jpg";
+import cftvImg from "@/assets/blog/cftv.webp";
+import automacaoImg from "@/assets/blog/automacao.webp";
+import alarmeImg from "@/assets/blog/alarme.webp";
+import fechaduraImg from "@/assets/blog/fechadura.webp";
+import videoporteiroImg from "@/assets/blog/videoporteiro.webp";
+import casaInteligenteImg from "@/assets/blog/casa-inteligente.webp";
 
 export interface BlogPost {
   id: number;

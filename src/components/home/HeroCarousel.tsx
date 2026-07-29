@@ -2,9 +2,9 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+import hero1 from "@/assets/hero-1.webp";
+import hero2 from "@/assets/hero-2.webp";
+import hero3 from "@/assets/hero-3.webp";
 import heroMobile1Asset from "@/assets/hero-mobile-1.png.asset.json";
 import heroMobile2Asset from "@/assets/hero-mobile-2.png.asset.json";
 import heroMobile3Asset from "@/assets/hero-mobile-3.png.asset.json";
@@ -49,7 +49,9 @@ const HeroCarousel = () => {
             <source media="(max-width: 640px)" srcSet={slides[current].mobile} />
             <img
               src={slides[current].desktop}
-              alt="Logiin"
+              alt="Instalação de câmeras de segurança em Manaus pela Logiin"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </picture>

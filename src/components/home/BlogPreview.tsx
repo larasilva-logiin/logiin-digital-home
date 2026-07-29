@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blog";
 import AnimatedSection from "@/components/AnimatedSection";
 
-import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
-import blog3 from "@/assets/blog-3.jpg";
+import blog1 from "@/assets/blog-1.webp";
+import blog2 from "@/assets/blog-2.webp";
+import blog3 from "@/assets/blog-3.webp";
 
 const blogImages = [blog1, blog2, blog3];
 
@@ -27,7 +27,9 @@ const BlogPreview = () => (
                 <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <img
                     src={blogImages[i]}
-                    alt={post.title}
+                    alt={`${post.title} — Blog Logiin`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-3 left-3">

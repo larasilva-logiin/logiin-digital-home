@@ -75,7 +75,9 @@ const BlogPost = () => {
             <div className="aspect-video rounded-2xl overflow-hidden border border-border">
               <img
                 src={post.image}
-                alt={post.title}
+                alt={`${post.title} — Blog Logiin`}
+                loading="lazy"
+                decoding="async"
                 width={1024}
                 height={1024}
                 className="w-full h-full object-cover"

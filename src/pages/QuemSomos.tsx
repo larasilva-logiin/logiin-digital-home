@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Lightbulb, ShieldCheck, Star, Heart, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
-import florestaHero from "@/assets/floresta-amazonica.jpg";
-import manausAerea from "@/assets/manaus-aerea.jpg";
+import florestaHero from "@/assets/floresta-amazonica.webp";
+import manausAerea from "@/assets/manaus-aerea.webp";
 
 const values = [
   { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", gradient: "from-emerald-400 to-teal-500", ring: "ring-emerald-400/30" },
@@ -25,7 +25,7 @@ const QuemSomos = () => (
     <section className="relative pt-28 pb-20 px-4 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={florestaHero} alt="Floresta Amazônica" className="w-full h-full object-cover" />
+        <img src={florestaHero} alt="Floresta Amazônica — Logiin, empresa de segurança de Manaus" loading="eager" decoding="async" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
       <div className="container-max text-center relative z-10">
@@ -73,7 +73,7 @@ const QuemSomos = () => (
 
           <AnimatedSection delay={0.15}>
             <div className="rounded-3xl overflow-hidden border-2 border-border shadow-xl">
-              <img src={manausAerea} alt="Vista aérea de Manaus" className="w-full aspect-[4/3] object-cover" />
+              <img src={manausAerea} alt="Vista aérea de Manaus — atendimento Logiin em toda a cidade" loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
             </div>
           </AnimatedSection>
         </div>
