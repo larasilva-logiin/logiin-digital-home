@@ -10,7 +10,7 @@ const Footer = () =>
         {/* Logo & Description */}
         <div>
           <Link to="/" className="inline-block mb-4">
-            <img src={logoBranca} alt="Logiin" className="h-12 w-auto" />
+            <img src={logoBranca} alt="Logiin — Câmeras de Segurança em Manaus" width="200" height="48" loading="lazy" decoding="async" className="h-12 w-auto" />
           </Link>
           <p className="text-sm text-white/50 leading-relaxed mb-6">
             Segurança e automação que transformam sua forma de viver.

@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1 group">
-            <img src={logoBranca} alt="Logiin" className="h-8 lg:h-10 w-auto" />
+            <img src={logoBranca} alt="Logiin — Câmeras de Segurança em Manaus" width="160" height="40" className="h-8 lg:h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
