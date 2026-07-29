@@ -136,6 +136,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── NOSSAS SOLUÇÕES ── */}
+      <SolutionsAccordion />
+
       {/* ── PACOTES DE CÂMERAS ── */}
       <section id="pacotes" className="section-padding bg-light-gray">
         <div className="container-max">
