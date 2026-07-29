@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, Star, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
+import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
@@ -67,29 +67,6 @@ const Home = () => {
         "Central de monitoramento",
         "Suporte técnico dedicado",
       ],
-    },
-  ];
-
-  const marcas = ["Intelbras", "Hikvision", "Control iD", "PPA", "JFL"];
-
-  const depoimentos = [
-    {
-      nome: "Rafael M.",
-      bairro: "Adrianópolis, Manaus",
-      texto:
-        "Instalação rápida e organizada. As câmeras têm imagem excelente e o app funciona muito bem. Recomendo a Logiin.",
-    },
-    {
-      nome: "Camila F.",
-      bairro: "Ponta Negra, Manaus",
-      texto:
-        "Equipe muito profissional. Fizeram o projeto sob medida para a nossa casa e o cabeamento ficou impecável.",
-    },
-    {
-      nome: "Síndico — Ed. Vista Rio",
-      bairro: "Flores, Manaus",
-      texto:
-        "Modernizamos o CFTV do condomínio com a Logiin. Suporte ágil e imagens muito melhores que o sistema anterior.",
     },
   ];
 
