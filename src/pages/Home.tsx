@@ -193,7 +193,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img src={familiaSegura} alt="Família protegida por sistema de câmeras de segurança instalado em Manaus" className="w-full h-full object-cover" />
+                <img src={familiaSegura} alt="Família protegida por sistema de câmeras de segurança instalado em Manaus pela Logiin" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
