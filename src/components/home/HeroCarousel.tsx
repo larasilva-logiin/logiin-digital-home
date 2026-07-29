@@ -49,7 +49,9 @@ const HeroCarousel = () => {
             <source media="(max-width: 640px)" srcSet={slides[current].mobile} />
             <img
               src={slides[current].desktop}
-              alt="Logiin"
+              alt="Instalação de câmeras de segurança em Manaus pela Logiin"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </picture>
