@@ -57,7 +57,9 @@ const Blog = () => {
               <div className="aspect-video md:aspect-auto relative overflow-hidden" style={{ minHeight: 200 }}>
                 <img
                   src={featured.image}
-                  alt={featured.title}
+                  alt={`${featured.title} — artigo em destaque no Blog Logiin`}
+                  loading="lazy"
+                  decoding="async"
                   width={1024}
                   height={1024}
                   className="absolute inset-0 w-full h-full object-cover"
