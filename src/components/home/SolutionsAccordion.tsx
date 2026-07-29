@@ -50,7 +50,9 @@ const SolutionsAccordion = () => {
               >
                 <img
                   src={images[sol.id]}
-                  alt={sol.title}
+                  alt={`${sol.title} — solução Logiin em Manaus`}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <motion.div
@@ -105,7 +107,9 @@ const SolutionsAccordion = () => {
               >
                 <img
                   src={images[sol.id]}
-                  alt={sol.title}
+                  alt={`${sol.title} — solução Logiin em Manaus`}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <motion.div
