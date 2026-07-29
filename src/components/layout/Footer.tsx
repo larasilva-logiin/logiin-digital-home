@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
 import { solutions } from "@/data/solutions";
-import logoBranca from "@/assets/logo-branca.png";
+import logoBranca from "@/assets/logo-branca.webp";
 
 const Footer = () =>
 <footer className="bg-navy text-white">

@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { solutions } from "@/data/solutions";
-import logoBranca from "@/assets/logo-branca.png";
+import logoBranca from "@/assets/logo-branca.webp";
 
 const navLinks = [
   { label: "Início", path: "/" },

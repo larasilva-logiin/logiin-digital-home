@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Lightbulb, ShieldCheck, Star, Heart, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
-import florestaHero from "@/assets/floresta-amazonica.jpg";
-import manausAerea from "@/assets/manaus-aerea.jpg";
+import florestaHero from "@/assets/floresta-amazonica.webp";
+import manausAerea from "@/assets/manaus-aerea.webp";
 
 const values = [
   { icon: Lightbulb, title: "Inovação", desc: "Buscamos sempre as melhores tecnologias do mercado para proteger você e sua família.", gradient: "from-emerald-400 to-teal-500", ring: "ring-emerald-400/30" },

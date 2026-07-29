@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { solutions } from "@/data/solutions";
 import AnimatedSection from "@/components/AnimatedSection";
 
-import solCftv from "@/assets/sol-cftv.jpg";
-import solAcesso from "@/assets/sol-acesso.jpg";
-import solAutomacao from "@/assets/sol-automacao.jpg";
-import solAlarmes from "@/assets/sol-alarmes.jpg";
-import solRedes from "@/assets/sol-redes.jpg";
-import solSuporte from "@/assets/sol-suporte.jpg";
+import solCftv from "@/assets/sol-cftv.webp";
+import solAcesso from "@/assets/sol-acesso.webp";
+import solAutomacao from "@/assets/sol-automacao.webp";
+import solAlarmes from "@/assets/sol-alarmes.webp";
+import solRedes from "@/assets/sol-redes.webp";
+import solSuporte from "@/assets/sol-suporte.webp";
 
 const images: Record<string, string> = {
   cftv: solCftv,

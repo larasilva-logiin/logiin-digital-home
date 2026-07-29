@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import SolutionsAccordion from "@/components/home/SolutionsAccordion";
 import BlogPreview from "@/components/home/BlogPreview";
-import familiaSegura from "@/assets/familia-segura.jpg";
+import familiaSegura from "@/assets/familia-segura.webp";
 import {
   Accordion,
   AccordionContent,
