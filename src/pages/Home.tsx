@@ -227,62 +227,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── MARCAS ── */}
-      <section className="py-12 bg-light-gray border-y border-border">
-        <div className="container-max px-4">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
-            Tecnologias que utilizamos
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {marcas.map((m) => (
-              <span
-                key={m}
-                className="text-lg sm:text-xl font-bold text-foreground/60 hover:text-foreground transition-colors"
-              >
-                {m}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── DEPOIMENTOS ── */}
-      <section className="section-padding bg-background">
-        <div className="container-max">
-          <AnimatedSection className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
-              O que dizem nossos clientes
-            </h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">
-              Projetos entregues em toda Manaus com nota máxima em atendimento.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            {depoimentos.map((d, i) => (
-              <AnimatedSection key={i} delay={i * 0.1} className="h-full">
-                <div className="h-full bg-card border border-border rounded-xl p-6 flex flex-col">
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(5)].map((_, k) => (
-                      <Star key={k} size={16} className="fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground italic leading-relaxed mb-5 flex-grow">
-                    “{d.texto}”
-                  </p>
-                  <div>
-                    <p className="font-semibold text-foreground text-sm">{d.nome}</p>
-                    <p className="text-xs text-muted-foreground">{d.bairro}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SOLUÇÕES COMPLEMENTARES ── */}
-      <SolutionsAccordion />
-
       {/* ── FAQ ── */}
       <section className="section-padding bg-light-gray">
         <div className="container-max max-w-3xl">
