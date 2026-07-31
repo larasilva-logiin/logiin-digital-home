@@ -86,6 +86,7 @@ const Footer = () =>
               logiin.automacao@gmail.com
             </li>
           </ul>
+          <p className="mt-4 text-xs text-white/30">CNPJ: 67.043.741/0001-20</p>
         </div>
       </div>
 
