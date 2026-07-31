@@ -60,6 +60,15 @@ function serve() {
 function collectRoutes() {
   const routes = new Set(["/", "/solucoes", "/quem-somos", "/blog", "/contato"]);
   try {
+    const servicesFile = fs.readFileSync(
+      path.resolve(__dirname, "..", "src", "data", "services.ts"),
+      "utf8",
+    );
+    const routeRe = /route:\s*["']([^"']+)["']/g;
+    let r;
+    while ((r = routeRe.exec(servicesFile))) routes.add(r[1]);
+  } catch {}
+  try {
     const blogFile = fs.readFileSync(
       path.resolve(__dirname, "..", "src", "data", "blog.ts"),
       "utf8",
