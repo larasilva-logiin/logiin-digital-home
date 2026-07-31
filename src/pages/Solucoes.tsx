@@ -3,12 +3,20 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { solutions, solutionCategories } from "@/data/solutions";
+import { servicePages } from "@/data/services";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Solucoes = () => {
   const [filter, setFilter] = useState("Todos");
+
+  const routeById: Record<string, string> = {
+    cftv: "/cameras-de-seguranca-manaus",
+    "controle-acesso": "/controle-de-acesso-manaus",
+    alarmes: "/alarmes-manaus",
+    automacao: "/automacao-residencial-manaus",
+  };
 
   const filtered = filter === "Todos"
     ? solutions
@@ -107,7 +115,7 @@ const Solucoes = () => {
                           ))}
                         </ul>
                       </div>
-                      <Link to="/contato" className="mt-auto">
+                      <Link to={routeById[sol.id] ?? "/contato"} className="mt-auto">
                         <Button size={isPrimary ? "default" : "sm"} className="font-semibold rounded-full">
                           Ver detalhes
                         </Button>
