@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
+import { Shield, Layers, Users, Clock, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
@@ -39,34 +39,16 @@ const Home = () => {
       icon: HomeIcon,
       title: "Residências",
       desc: "Proteção completa para sua casa e família com câmeras discretas e acesso pelo celular.",
-      items: [
-        "Kit com 4 a 8 câmeras HD/Full HD",
-        "Gravador (DVR/NVR) com HD dedicado",
-        "Configuração de acesso remoto",
-        "Cabeamento oculto e organizado",
-      ],
     },
     {
       icon: Building2,
       title: "Empresas",
       desc: "CFTV corporativo com câmeras de alta resolução, monitoramento por área e integração com controle de acesso.",
-      items: [
-        "Câmeras IP profissionais",
-        "Gravação contínua e por evento",
-        "Detecção inteligente de movimento",
-        "Integração com alarmes e acesso",
-      ],
     },
     {
       icon: Building,
       title: "Condomínios",
       desc: "Projetos completos para portaria, áreas comuns e perímetro com visualização centralizada.",
-      items: [
-        "Cobertura de portaria e garagem",
-        "Câmeras de perímetro com visão noturna",
-        "Central de monitoramento",
-        "Suporte técnico dedicado",
-      ],
     },
   ];
 
@@ -160,15 +142,7 @@ const Home = () => {
                       <Icon size={28} className="text-primary" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-2">{p.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-5">{p.desc}</p>
-                    <ul className="space-y-2 mb-6 flex-grow">
-                      {p.items.map((it, k) => (
-                        <li key={k} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle size={16} className="text-primary flex-shrink-0 mt-0.5" />
-                          <span>{it}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-sm text-muted-foreground mb-6 flex-grow">{p.desc}</p>
                     <a
                       href={WHATSAPP_URL}
                       target="_blank"

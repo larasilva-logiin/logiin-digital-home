@@ -18,6 +18,17 @@ const entries: SitemapEntry[] = [
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
 ]
 
+const servicesFile = readFileSync(resolve("src/data/services.ts"), "utf8")
+const routeRe = /route:\s*["']([^"']+)["']/g
+let r: RegExpExecArray | null
+while ((r = routeRe.exec(servicesFile))) {
+  entries.push({
+    path: r[1],
+    changefreq: "monthly",
+    priority: r[1] === "/cameras-de-seguranca-manaus" ? "0.95" : "0.85",
+  })
+}
+
 const blogFile = readFileSync(resolve("src/data/blog.ts"), "utf8")
 const re = /slug:\s*["']([^"']+)["']/g
 let m: RegExpExecArray | null

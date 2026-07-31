@@ -3,12 +3,20 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { solutions, solutionCategories } from "@/data/solutions";
+import { servicePages } from "@/data/services";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Solucoes = () => {
   const [filter, setFilter] = useState("Todos");
+
+  const routeById: Record<string, string> = {
+    cftv: "/cameras-de-seguranca-manaus",
+    "controle-acesso": "/controle-de-acesso-manaus",
+    alarmes: "/alarmes-manaus",
+    automacao: "/automacao-residencial-manaus",
+  };
 
   const filtered = filter === "Todos"
     ? solutions
@@ -107,7 +115,7 @@ const Solucoes = () => {
                           ))}
                         </ul>
                       </div>
-                      <Link to="/contato" className="mt-auto">
+                      <Link to={routeById[sol.id] ?? "/contato"} className="mt-auto">
                         <Button size={isPrimary ? "default" : "sm"} className="font-semibold rounded-full">
                           Ver detalhes
                         </Button>
@@ -118,6 +126,22 @@ const Solucoes = () => {
               })}
             </AnimatePresence>
           </motion.div>
+
+          {/* Páginas de serviço */}
+          <div className="mt-12">
+            <h2 className="text-xl font-bold text-foreground mb-4">Páginas de serviço</h2>
+            <div className="flex flex-wrap gap-2">
+              {servicePages.map((s) => (
+                <Link
+                  key={s.slug}
+                  to={s.route}
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

@@ -26,6 +26,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://logiin.com.br/cameras-de-seguranca-manaus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://logiin.com.br/controle-de-acesso-manaus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://logiin.com.br/alarmes-manaus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://logiin.com.br/cerca-eletrica-manaus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://logiin.com.br/automacao-residencial-manaus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://logiin.com.br/fechaduras-eletronicas-manaus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://logiin.com.br/blog/cftv-x-cameras-comuns</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
