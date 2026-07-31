@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Layers, Users, Clock, CheckCircle, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
+import { Shield, Layers, Users, Clock, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
