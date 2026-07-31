@@ -126,6 +126,22 @@ const Solucoes = () => {
               })}
             </AnimatePresence>
           </motion.div>
+
+          {/* Páginas de serviço */}
+          <div className="mt-12">
+            <h2 className="text-xl font-bold text-foreground mb-4">Páginas de serviço</h2>
+            <div className="flex flex-wrap gap-2">
+              {servicePages.map((s) => (
+                <Link
+                  key={s.slug}
+                  to={s.route}
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
