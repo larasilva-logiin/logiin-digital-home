@@ -13,6 +13,8 @@ import QuemSomos from "@/pages/QuemSomos";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import ContactPage from "@/pages/ContactPage";
+import ServicePage from "@/pages/ServicePage";
+import { servicePages } from "@/data/services";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,7 +30,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/solucoes" element={<Solucoes />} />
-            
+            {servicePages.map((s) => (
+              <Route key={s.slug} path={s.route} element={<ServicePage slug={s.slug} />} />
+            ))}
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
