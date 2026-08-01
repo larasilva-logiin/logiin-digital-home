@@ -28,6 +28,10 @@ const Solucoes = () => {
         title="Soluções em Segurança Eletrônica: CFTV, Alarme, Automação e Controle de Acesso | Logiin Manaus"
         description="Conheça todas as soluções da Logiin em Manaus: câmeras de segurança, alarme monitorado, automação residencial, controle de acesso e videoporteiro. Fale com a gente pelo WhatsApp."
         path="/solucoes"
+        breadcrumbs={[
+          { name: "Início", path: "/" },
+          { name: "Soluções", path: "/solucoes" },
+        ]}
       />
       {/* Hero */}
       <section className="bg-navy pt-28 pb-12 px-4">
