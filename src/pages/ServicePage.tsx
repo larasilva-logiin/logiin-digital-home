@@ -24,6 +24,11 @@ const ServicePage = ({ slug }: Props) => {
         title={service.title}
         description={service.description}
         path={service.route}
+        breadcrumbs={[
+          { name: "Início", path: "/" },
+          { name: "Soluções", path: "/solucoes" },
+          { name: service.name, path: service.route },
+        ]}
       />
 
       {/* Hero */}
