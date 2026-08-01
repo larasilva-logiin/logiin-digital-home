@@ -109,6 +109,33 @@ const ServicePage = ({ slug }: Props) => {
 
       {/* Veja também */}
       <section className="section-padding bg-light-gray">
+        <div className="container-max mb-14">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-6">
+            Perguntas frequentes
+          </h2>
+          <div className="grid md:grid-cols-2 gap-5">
+            {service.faq.map((f, i) => (
+              <div key={i} className="bg-card border border-border rounded-xl p-6">
+                <h3 className="font-bold text-foreground mb-2">{f.q}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: service.faq.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              }),
+            }}
+          />
+        </div>
         <div className="container-max">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-8">Veja também</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
