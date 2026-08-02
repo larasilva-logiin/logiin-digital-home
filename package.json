@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "predev": "bunx tsx scripts/generate-sitemap.ts",
-    "prebuild": "bunx tsx scripts/generate-sitemap.ts"
+    "prebuild": "bunx tsx scripts/generate-sitemap.ts",
+    "export:zip": "cd dist && rm -f ../logiin-dist.zip && zip -rq ../logiin-dist.zip . -x \".DS_Store\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
