@@ -58,26 +58,43 @@ function serve() {
 }
 
 function collectRoutes() {
-  const routes = new Set(["/", "/solucoes", "/quem-somos", "/blog", "/contato"]);
-  try {
-    const servicesFile = fs.readFileSync(
-      path.resolve(__dirname, "..", "src", "data", "services.ts"),
-      "utf8",
-    );
-    const routeRe = /route:\s*["']([^"']+)["']/g;
-    let r;
-    while ((r = routeRe.exec(servicesFile))) routes.add(r[1]);
-  } catch {}
-  try {
-    const blogFile = fs.readFileSync(
-      path.resolve(__dirname, "..", "src", "data", "blog.ts"),
-      "utf8",
-    );
-    const re = /slug:\s*["']([^"']+)["']/g;
-    let m;
-    while ((m = re.exec(blogFile))) routes.add(`/blog/${m[1]}`);
-  } catch {}
-  return [...routes];
+  const src = path.resolve(__dirname, "..", "src");
+  const read = (p) => {
+    try {
+      return fs.readFileSync(p, "utf8");
+    } catch {
+      return "";
+    }
+  };
+
+  // Dynamic params are resolved from the data files that feed the router.
+  const params = {
+    "/blog/:slug": [...read(path.join(src, "data", "blog.ts")).matchAll(/slug:\s*["']([^"']+)["']/g)].map(
+      (m) => `/blog/${m[1]}`,
+    ),
+  };
+
+  // Routes declared as data (rendered via .map in the router).
+  const dataRoutes = [
+    ...read(path.join(src, "data", "services.ts")).matchAll(/route:\s*["'](\/[^"']*)["']/g),
+  ].map((m) => m[1]);
+
+  // Static routes read straight from the React Router definitions in App.tsx.
+  const appFile = read(path.join(src, "App.tsx"));
+  const declared = [...appFile.matchAll(/path=["'](\/[^"']*)["']/g)].map((m) => m[1]);
+
+  const routes = new Set();
+  for (const r of declared) {
+    if (r.includes("*")) continue;
+    if (r.includes(":")) {
+      (params[r] || []).forEach((x) => routes.add(x));
+      continue;
+    }
+    routes.add(r);
+  }
+  dataRoutes.forEach((r) => routes.add(r));
+  routes.add("/");
+  return [...routes].sort((a, b) => a.localeCompare(b));
 }
 
 async function main() {
