@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Phone, Mail, MessageCircle } from "lucide-react";
+import { Instagram, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
 import { solutions } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.webp";
 
@@ -17,8 +17,8 @@ const Footer = () =>
           </p>
           <div className="flex gap-3">
             {[
-          { icon: Instagram, href: "https://www.instagram.com/logiin.automacao?igsh=MWZibjV6ODh6ajdsaA%3D%3D&utm_source=qr", label: "Instagram" },
-          { icon: Linkedin, href: "#", label: "LinkedIn" },
+          { icon: Instagram, href: "https://www.instagram.com/logiin_segurancaeautomacao/", label: "Instagram" },
+          { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61587541454121", label: "Facebook" },
           { icon: MessageCircle, href: "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site", label: "WhatsApp" }].
           map(({ icon: Icon, href, label }) =>
           <a
