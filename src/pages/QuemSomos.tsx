@@ -35,9 +35,9 @@ const QuemSomos = () => (
             Nascidos em Manaus, conectados ao Brasil
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-white">
-            Tecnologia com o{" "}
+            Tecnologia de perto,{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 to-teal-300">
-              calor da Amazônia
+              feita para Manaus
             </span>
           </h1>
           <p className="max-w-xl mx-auto text-lg text-white/80">
@@ -60,13 +60,13 @@ const QuemSomos = () => (
             </h2>
             <div className="space-y-4 leading-relaxed text-muted-foreground">
               <p>
-                A Logiin nasceu em Manaus com um objetivo claro: oferecer soluções de segurança e automação que realmente funcionam no dia a dia.
+                A Logiin está em Manaus com um objetivo claro: oferecer soluções de segurança e automação que realmente funcionam no dia a dia.
               </p>
               <p>
-                Fundada por uma mulher apaixonada por tecnologia, a empresa surgiu da vontade de tornar esse mercado mais acessível, simples e próximo das pessoas, sem complicação e sem promessas vazias.
+                Acreditamos que tecnologia de segurança deve ser acessível, simples e próxima das pessoas. Por isso, cuidamos de cada projeto com atenção, sem complicação e sem promessas vazias.
               </p>
               <p>
-                Desde o início, o foco é entender a necessidade de cada cliente e entregar soluções práticas, bem planejadas e que façam sentido para a realidade de cada espaço, seja uma casa ou um negócio.
+                Nosso foco é entender a necessidade de cada cliente e entregar soluções práticas, bem planejadas e que façam sentido para a realidade de cada espaço, seja uma casa ou um negócio. Cada instalação é tratada com cuidado técnico e respeito pela rotina de quem vai usar.
               </p>
             </div>
           </AnimatedSection>

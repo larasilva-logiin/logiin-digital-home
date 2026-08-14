@@ -27,7 +27,7 @@ const Home = () => {
 
   const beneficios = [
     { icon: ShieldCheck, title: "Segurança 24 horas", desc: "Monitoramento visual contínuo do seu patrimônio, dia e noite." },
-    { icon: Award, title: "Instaladores especializados", desc: "Equipe técnica treinada com anos de experiência em Manaus." },
+    { icon: Award, title: "Instaladores especializados", desc: "Equipe técnica certificada e treinada nas principais tecnologias do mercado." },
     { icon: Smartphone, title: "Acesso pelo celular", desc: "Acompanhe suas câmeras em tempo real de qualquer lugar." },
     { icon: BadgeCheck, title: "Marcas líderes", desc: "Trabalhamos com Intelbras, Hikvision e outras referências do mercado." },
     { icon: Zap, title: "Orçamento personalizado", desc: "Resposta ágil pelo WhatsApp e visita técnica sem compromisso." },
@@ -96,7 +96,7 @@ const Home = () => {
               Câmeras de segurança com <span className="text-gradient">instalação profissional</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Mais de uma década ajudando famílias, empresas e condomínios de Manaus a proteger o que importa.
+              Ajudando famílias, empresas e condomínios de Manaus a proteger o que importa, com projetos personalizados e equipamentos certificados.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
