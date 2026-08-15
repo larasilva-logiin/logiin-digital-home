@@ -89,7 +89,7 @@ const Home = () => {
       {/* ── PACOTES DE CÂMERAS ── */}
       <section id="pacotes" className="section-padding bg-light-gray">
         <div className="container-max">
-          <AnimatedSection className="text-center mb-14">
+          <AnimatedSection className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
               Projetos de CFTV para cada necessidade
             </h2>
@@ -139,11 +139,11 @@ const Home = () => {
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4">
                 Autoridade e experiência em Manaus
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-6 leading-tight">
                 Segurança de verdade começa com{" "}
                 <span className="text-gradient">quem entende do assunto</span>
               </h2>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {whyItems.map((item, i) => {
                   const Icon = item.icon;
                   return (
@@ -159,7 +159,7 @@ const Home = () => {
                   );
                 })}
               </div>
-              <Link to="/quem-somos" className="inline-block mt-8">
+              <Link to="/quem-somos" className="inline-block mt-6">
                 <Button variant="outline" className="font-semibold rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white">
                   Conhecer a empresa
                 </Button>
@@ -172,7 +172,7 @@ const Home = () => {
       {/* ── BENEFÍCIOS CFTV ── */}
       <section className="section-padding bg-background">
         <div className="container-max">
-          <AnimatedSection className="text-center mb-14">
+          <AnimatedSection className="text-center mb-10">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4">
               Por que instalar com a Logiin
             </span>
@@ -183,7 +183,7 @@ const Home = () => {
               Ajudando famílias, empresas e condomínios de Manaus a proteger o que importa, com projetos personalizados e equipamentos certificados.
             </p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 max-w-4xl mx-auto">
             {beneficios.map((b, i) => {
               const Icon = b.icon;
               return (
@@ -205,7 +205,7 @@ const Home = () => {
       {/* ── FAQ ── */}
       <section className="section-padding bg-light-gray">
         <div className="container-max max-w-3xl">
-          <AnimatedSection className="text-center mb-10">
+          <AnimatedSection className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
               Perguntas frequentes
             </h2>
