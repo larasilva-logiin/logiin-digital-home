@@ -83,39 +83,6 @@ const Home = () => {
       {/* ── HERO CAROUSEL ── */}
       <HeroCarousel />
 
-      {/* ── BENEFÍCIOS CFTV ── */}
-      <section className="section-padding bg-background">
-        <div className="container-max">
-          <AnimatedSection className="text-center mb-14">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4">
-              Por que instalar com a Logiin
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
-              Câmeras de segurança com <span className="text-gradient">instalação profissional</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ajudando famílias, empresas e condomínios de Manaus a proteger o que importa, com projetos personalizados e equipamentos certificados.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 max-w-4xl mx-auto">
-            {beneficios.map((b, i) => {
-              const Icon = b.icon;
-              return (
-                <AnimatedSection key={i} delay={i * 0.05}>
-                  <div className="h-full bg-card border border-border rounded-xl p-6 pt-8 hover:shadow-lg transition-shadow flex flex-col relative">
-                    <div className="w-12 h-12 rounded-lg bg-brand-gradient shadow-md flex items-center justify-center mb-4 -mt-10">
-                      <Icon size={24} className="text-primary-foreground" />
-                    </div>
-                    <h3 className="font-bold text-foreground mb-2">{b.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
-                  </div>
-                </AnimatedSection>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* ── NOSSAS SOLUÇÕES ── */}
       <SolutionsAccordion />
 
@@ -198,6 +165,39 @@ const Home = () => {
                 </Button>
               </Link>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BENEFÍCIOS CFTV ── */}
+      <section className="section-padding bg-background">
+        <div className="container-max">
+          <AnimatedSection className="text-center mb-14">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4">
+              Por que instalar com a Logiin
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
+              Câmeras de segurança com <span className="text-gradient">instalação profissional</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Ajudando famílias, empresas e condomínios de Manaus a proteger o que importa, com projetos personalizados e equipamentos certificados.
+            </p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 max-w-4xl mx-auto">
+            {beneficios.map((b, i) => {
+              const Icon = b.icon;
+              return (
+                <AnimatedSection key={i} delay={i * 0.05}>
+                  <div className="h-full bg-card border border-border rounded-xl p-6 pt-8 hover:shadow-lg transition-shadow flex flex-col relative">
+                    <div className="w-12 h-12 rounded-lg bg-brand-gradient shadow-md flex items-center justify-center mb-4 -mt-10">
+                      <Icon size={24} className="text-primary-foreground" />
+                    </div>
+                    <h3 className="font-bold text-foreground mb-2">{b.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
