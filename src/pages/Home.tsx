@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Layers, Users, Clock, ShieldCheck, Smartphone, BadgeCheck, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
+import { Shield, Layers, Users, Clock, Smartphone, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
@@ -26,11 +26,9 @@ const Home = () => {
   ];
 
   const beneficios = [
-    { icon: ShieldCheck, title: "Segurança 24 horas", desc: "Monitoramento visual contínuo do seu patrimônio, dia e noite." },
     { icon: Award, title: "Instaladores especializados", desc: "Equipe técnica certificada e treinada nas principais tecnologias do mercado." },
     { icon: Smartphone, title: "Acesso pelo celular", desc: "Acompanhe suas câmeras em tempo real de qualquer lugar." },
-    { icon: BadgeCheck, title: "Marcas líderes", desc: "Trabalhamos com Intelbras, Hikvision e outras referências do mercado." },
-    { icon: Zap, title: "Orçamento personalizado", desc: "Resposta ágil pelo WhatsApp e visita técnica sem compromisso." },
+    { icon: Zap, title: "Orçamento personalizado", desc: "Resposta ágil pelo WhatsApp, com avaliação técnica para um orçamento sob medida." },
     { icon: Wrench, title: "Garantia na instalação", desc: "Serviço com garantia e suporte pós-venda dedicado." },
   ];
 
@@ -99,14 +97,14 @@ const Home = () => {
               Ajudando famílias, empresas e condomínios de Manaus a proteger o que importa, com projetos personalizados e equipamentos certificados.
             </p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 max-w-4xl mx-auto">
             {beneficios.map((b, i) => {
               const Icon = b.icon;
               return (
                 <AnimatedSection key={i} delay={i * 0.05}>
-                  <div className="h-full bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow flex flex-col">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon size={24} className="text-primary" />
+                  <div className="h-full bg-card border border-border rounded-xl p-6 pt-8 hover:shadow-lg transition-shadow flex flex-col relative">
+                    <div className="w-12 h-12 rounded-lg bg-brand-gradient shadow-md flex items-center justify-center mb-4 -mt-10">
+                      <Icon size={24} className="text-primary-foreground" />
                     </div>
                     <h3 className="font-bold text-foreground mb-2">{b.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
@@ -236,11 +234,14 @@ const Home = () => {
       <section className="bg-brand-gradient section-padding">
         <div className="container-max text-center">
           <AnimatedSection>
+            <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/25 flex items-center justify-center mx-auto mb-6">
+              <MessageCircle size={26} className="text-white" />
+            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Pronto para proteger o que é seu em Manaus?
+              Pronto para proteger o que é seu?
             </h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">
-              Fale com nossos especialistas pelo WhatsApp e receba um orçamento personalizado, sem compromisso.
+              Fale com nossos especialistas pelo WhatsApp e receba um orçamento personalizado para o seu projeto.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-base px-8 py-6 rounded-full">
