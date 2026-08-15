@@ -26,11 +26,9 @@ const Home = () => {
   ];
 
   const beneficios = [
-    { icon: ShieldCheck, title: "Segurança 24 horas", desc: "Monitoramento visual contínuo do seu patrimônio, dia e noite." },
     { icon: Award, title: "Instaladores especializados", desc: "Equipe técnica certificada e treinada nas principais tecnologias do mercado." },
     { icon: Smartphone, title: "Acesso pelo celular", desc: "Acompanhe suas câmeras em tempo real de qualquer lugar." },
-    { icon: BadgeCheck, title: "Marcas líderes", desc: "Trabalhamos com Intelbras, Hikvision e outras referências do mercado." },
-    { icon: Zap, title: "Orçamento personalizado", desc: "Resposta ágil pelo WhatsApp e visita técnica sem compromisso." },
+    { icon: Zap, title: "Orçamento personalizado", desc: "Resposta ágil pelo WhatsApp, com avaliação técnica para um orçamento sob medida." },
     { icon: Wrench, title: "Garantia na instalação", desc: "Serviço com garantia e suporte pós-venda dedicado." },
   ];
 
@@ -99,14 +97,14 @@ const Home = () => {
               Ajudando famílias, empresas e condomínios de Manaus a proteger o que importa, com projetos personalizados e equipamentos certificados.
             </p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {beneficios.map((b, i) => {
               const Icon = b.icon;
               return (
                 <AnimatedSection key={i} delay={i * 0.05}>
-                  <div className="h-full bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow flex flex-col">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon size={24} className="text-primary" />
+                  <div className="h-full bg-card border border-border rounded-xl p-6 pt-8 hover:shadow-lg transition-shadow flex flex-col relative">
+                    <div className="w-12 h-12 rounded-lg bg-brand-gradient shadow-md flex items-center justify-center mb-4 -mt-10">
+                      <Icon size={24} className="text-primary-foreground" />
                     </div>
                     <h3 className="font-bold text-foreground mb-2">{b.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
