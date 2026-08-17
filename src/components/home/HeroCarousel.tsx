@@ -67,12 +67,12 @@ const HeroCarousel = () => {
             <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-3 sm:mb-6">
               Especialistas em CFTV em Manaus
             </span>
-            <h1 className="text-[1.5rem] leading-[1.12] sm:text-4xl lg:text-[56px] font-extrabold text-white mb-3 sm:mb-6">
+            <h1 className="text-[1.5rem] leading-[1.2] sm:text-4xl sm:leading-[1.25] lg:text-[52px] lg:leading-[1.2] font-extrabold text-white mb-3 sm:mb-6 lg:mb-7 tracking-tight [text-wrap:balance]">
               Instalação de{" "}
               <span className="text-gradient">Câmeras de Segurança</span>{" "}
               em Manaus com Qualidade e Garantia
             </h1>
-            <p className="text-sm sm:text-base lg:text-lg text-[hsl(210,30%,70%)] max-w-lg mb-5 sm:mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-[hsl(210,30%,72%)] max-w-lg mb-5 sm:mb-8 leading-relaxed lg:leading-8">
               Proteja sua residência, empresa ou condomínio com projetos personalizados e instalação profissional. Solicite um orçamento personalizado pelo WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
