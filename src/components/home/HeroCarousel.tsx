@@ -61,19 +61,19 @@ const HeroCarousel = () => {
       </AnimatePresence>
 
       {/* Static Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center sm:justify-center pb-24 sm:pb-0">
+      <div className="relative z-10 h-full flex flex-col justify-center sm:justify-center pt-16 sm:pt-20 pb-28 sm:pb-0">
         <div className="container-max px-5 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
-            <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-4 sm:mb-6">
+            <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-3 sm:mb-6">
               Especialistas em CFTV em Manaus
             </span>
-            <h1 className="text-[1.65rem] leading-[1.15] sm:text-4xl lg:text-[56px] font-extrabold text-white mb-4 sm:mb-6">
+            <h1 className="text-[1.5rem] leading-[1.12] sm:text-4xl lg:text-[56px] font-extrabold text-white mb-3 sm:mb-6">
               Instalação de{" "}
               <span className="text-gradient">Câmeras de Segurança</span>{" "}
               em Manaus com Qualidade e Garantia
             </h1>
-            <p className="text-sm sm:text-base lg:text-lg text-[hsl(210,30%,70%)] max-w-lg mb-6 sm:mb-8 leading-relaxed">
-              Proteja sua residência, empresa ou condomínio com projetos personalizados, equipamentos das melhores marcas e instalação profissional. Solicite um orçamento personalizado pelo WhatsApp.
+            <p className="text-sm sm:text-base lg:text-lg text-[hsl(210,30%,70%)] max-w-lg mb-5 sm:mb-8 leading-relaxed">
+              Proteja sua residência, empresa ou condomínio com projetos personalizados e instalação profissional. Solicite um orçamento personalizado pelo WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
@@ -82,7 +82,7 @@ const HeroCarousel = () => {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                <Button size="lg" className="font-semibold text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-full w-full sm:w-auto">
+                <Button size="lg" className="font-semibold text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6 rounded-full w-full sm:w-auto">
                   Solicitar Orçamento
                 </Button>
               </a>
@@ -90,7 +90,7 @@ const HeroCarousel = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-full w-full sm:w-auto"
+                  className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6 rounded-full w-full sm:w-auto"
                 >
                   Conhecer Nossos Projetos
                 </Button>
