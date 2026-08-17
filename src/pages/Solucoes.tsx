@@ -53,6 +53,9 @@ const Solucoes = () => {
       {/* Filter + Cards */}
       <section className="section-padding bg-background">
         <div className="container-max">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-6">
+            Soluções de segurança e automação em Manaus
+          </h2>
           <div className="flex flex-wrap gap-2 mb-10">
             {solutionCategories.map((cat) => (
               <button
