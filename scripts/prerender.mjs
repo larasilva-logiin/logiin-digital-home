@@ -109,7 +109,7 @@ async function main() {
   console.log(`[prerender] routes: ${routes.join(", ")}`);
 
   const browser = await chromium.launch(
-    EXECUTABLE_PATH ? { executablePath: EXECUTABLE_PATH } : {},
+    EXECUTABLE_PATH ? { executablePath: EXECUTABLE_PATH } : { channel: "chromium" },
   );
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
 
