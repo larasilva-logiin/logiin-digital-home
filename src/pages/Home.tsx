@@ -152,7 +152,7 @@ const Home = () => {
                         <Icon size={20} className="text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                        <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
                       </div>
                     </div>

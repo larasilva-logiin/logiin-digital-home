@@ -109,7 +109,7 @@ const Solucoes = () => {
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow">{sol.description}</p>
                       <div className="mb-4">
-                        <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Benefícios</h4>
+                        <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Benefícios</h3>
                         <ul className={`space-y-1.5 ${isPrimary ? "sm:grid sm:grid-cols-2 sm:gap-x-4" : ""}`}>
                           {sol.benefits.slice(0, isPrimary ? 6 : 3).map((b, i) => (
                             <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
