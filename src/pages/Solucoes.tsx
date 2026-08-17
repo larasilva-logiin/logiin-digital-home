@@ -25,13 +25,29 @@ const Solucoes = () => {
   return (
     <div>
       <SEO
-        title="Soluções em Segurança Eletrônica: CFTV, Alarme, Automação e Controle de Acesso | Logiin Manaus"
-        description="Conheça todas as soluções da Logiin em Manaus: câmeras de segurança, alarme monitorado, automação residencial, controle de acesso e videoporteiro. Fale com a gente pelo WhatsApp."
+        title="Soluções em Segurança Eletrônica em Manaus | Logiin"
+        description="CFTV, alarmes, automação residencial, controle de acesso e videoporteiro em Manaus. Projetos personalizados com instalação profissional. Orçamento pelo WhatsApp."
         path="/solucoes"
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Soluções", path: "/solucoes" },
         ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Soluções de segurança e automação em Manaus",
+          itemListElement: solutions.map((s, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Service",
+              name: s.title,
+              description: s.description,
+              provider: { "@type": "LocalBusiness", name: "Logiin" },
+              areaServed: { "@type": "City", name: "Manaus" },
+            },
+          })),
+        }}
       />
       {/* Hero */}
       <section className="bg-navy pt-28 pb-12 px-4">
@@ -53,6 +69,9 @@ const Solucoes = () => {
       {/* Filter + Cards */}
       <section className="section-padding bg-background">
         <div className="container-max">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-6">
+            Soluções de segurança e automação em Manaus
+          </h2>
           <div className="flex flex-wrap gap-2 mb-10">
             {solutionCategories.map((cat) => (
               <button
@@ -109,7 +128,7 @@ const Solucoes = () => {
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow">{sol.description}</p>
                       <div className="mb-4">
-                        <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Benefícios</h4>
+                        <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Benefícios</h3>
                         <ul className={`space-y-1.5 ${isPrimary ? "sm:grid sm:grid-cols-2 sm:gap-x-4" : ""}`}>
                           {sol.benefits.slice(0, isPrimary ? 6 : 3).map((b, i) => (
                             <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">

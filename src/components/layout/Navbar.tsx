@@ -115,6 +115,8 @@ const Navbar = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fechar menu" : "Alternar menu"}
+            aria-expanded={isOpen}
             className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}

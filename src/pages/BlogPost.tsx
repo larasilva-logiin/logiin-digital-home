@@ -4,8 +4,20 @@ import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { absoluteUrl } from "@/config/site";
 
 const WHATSAPP_URL = "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site";
+
+const MONTHS: Record<string, string> = {
+  Jan: "01", Fev: "02", Mar: "03", Abr: "04", Mai: "05", Jun: "06",
+  Jul: "07", Ago: "08", Set: "09", Out: "10", Nov: "11", Dez: "12",
+};
+
+const toISODate = (date: string): string | undefined => {
+  const [d, m, y] = date.split(" ");
+  const month = MONTHS[m as keyof typeof MONTHS];
+  return month && d && y ? `${y}-${month}-${d.padStart(2, "0")}` : undefined;
+};
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -32,6 +44,26 @@ const BlogPost = () => {
         title={`${post.title} | Blog Logiin`}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
+        ogType="article"
+        breadcrumbs={[
+          { name: "Início", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: toISODate(post.date),
+          author: { "@type": "Organization", name: post.author },
+          publisher: {
+            "@type": "Organization",
+            name: "Logiin",
+            logo: { "@type": "ImageObject", url: "https://logiin.com.br/assets/logo-logiin.webp" },
+          },
+          mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+        }}
       />
       {/* Header */}
       <section className="bg-navy pt-28 pb-14 px-4">

@@ -108,8 +108,14 @@ async function main() {
   console.log(`[prerender] serving dist at ${baseUrl}`);
   console.log(`[prerender] routes: ${routes.join(", ")}`);
 
+  if (process.env.NIX_LD_LIBRARY_PATH) {
+    process.env.LD_LIBRARY_PATH = [process.env.NIX_LD_LIBRARY_PATH, process.env.LD_LIBRARY_PATH]
+      .filter(Boolean)
+      .join(":");
+  }
+
   const browser = await chromium.launch(
-    EXECUTABLE_PATH ? { executablePath: EXECUTABLE_PATH } : {},
+    EXECUTABLE_PATH ? { executablePath: EXECUTABLE_PATH } : { channel: "chromium" },
   );
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
 

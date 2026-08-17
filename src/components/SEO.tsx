@@ -10,9 +10,13 @@ interface SEOProps {
   path?: string;
   /** Trilha de navegação para marcação BreadcrumbList (schema.org). */
   breadcrumbs?: { name: string; path: string }[];
+  /** og:type — "website" (padrão) ou "article" em posts do blog. */
+  ogType?: "website" | "article";
+  /** JSON-LD adicional (Article, Service, etc.). */
+  jsonLd?: Record<string, unknown>;
 }
 
-const SEO = ({ title, description, ogTitle, ogDescription, path, breadcrumbs }: SEOProps) => {
+const SEO = ({ title, description, ogTitle, ogDescription, path, breadcrumbs, ogType, jsonLd }: SEOProps) => {
   const ogT = ogTitle ?? title;
   const ogD = ogDescription ?? description;
   const url = path ? absoluteUrl(path) : undefined;
@@ -39,9 +43,11 @@ const SEO = ({ title, description, ogTitle, ogDescription, path, breadcrumbs }: 
       <meta name="twitter:description" content={ogD} />
       {url && <link rel="canonical" href={url} />}
       {url && <meta property="og:url" content={url} />}
+      {ogType && <meta property="og:type" content={ogType} />}
       {breadcrumbLd && (
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       )}
+      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
     </Helmet>
   );
 };

@@ -36,9 +36,9 @@ const Footer = () =>
 
         {/* Solutions */}
         <div>
-          <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-primary">
+          <h3 className="font-semibold text-sm uppercase tracking-wider mb-4 text-primary">
             Soluções
-          </h4>
+          </h3>
           <ul className="space-y-2.5 text-sm text-white/50">
             {solutions.map((s) =>
           <li key={s.id}>
@@ -52,9 +52,9 @@ const Footer = () =>
 
         {/* Company */}
         <div>
-          <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-primary">
+          <h3 className="font-semibold text-sm uppercase tracking-wider mb-4 text-primary">
             Empresa
-          </h4>
+          </h3>
           <ul className="space-y-2.5 text-sm text-white/50">
             {[
           { label: "Início", path: "/" },
@@ -73,9 +73,9 @@ const Footer = () =>
 
         {/* Contact */}
         <div>
-          <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-primary">
+          <h3 className="font-semibold text-sm uppercase tracking-wider mb-4 text-primary">
             Contato
-          </h4>
+          </h3>
           <ul className="space-y-3 text-sm text-white/50">
             <li className="flex items-center gap-2">
               <Phone size={16} className="text-primary flex-shrink-0" />
