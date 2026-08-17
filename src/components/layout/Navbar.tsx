@@ -39,7 +39,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container-max px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1 group">
             <img src={logoBranca} alt="Logiin — Câmeras de Segurança em Manaus" width="160" height="40" className="h-8 lg:h-10 w-auto" />
@@ -130,7 +130,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-16 bg-navy/98 backdrop-blur-xl z-40"
+            className="lg:hidden fixed inset-0 top-14 sm:top-16 bg-navy/98 backdrop-blur-xl z-40"
           >
             <nav className="container-max px-6 py-8 flex flex-col gap-2">
               {navLinks.map((link) => (
