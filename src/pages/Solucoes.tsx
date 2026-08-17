@@ -25,13 +25,29 @@ const Solucoes = () => {
   return (
     <div>
       <SEO
-        title="Soluções em Segurança Eletrônica: CFTV, Alarme, Automação e Controle de Acesso | Logiin Manaus"
-        description="Conheça todas as soluções da Logiin em Manaus: câmeras de segurança, alarme monitorado, automação residencial, controle de acesso e videoporteiro. Fale com a gente pelo WhatsApp."
+        title="Soluções em Segurança Eletrônica em Manaus | Logiin"
+        description="CFTV, alarmes, automação residencial, controle de acesso e videoporteiro em Manaus. Projetos personalizados com instalação profissional. Orçamento pelo WhatsApp."
         path="/solucoes"
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Soluções", path: "/solucoes" },
         ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Soluções de segurança e automação em Manaus",
+          itemListElement: solutions.map((s, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Service",
+              name: s.title,
+              description: s.description,
+              provider: { "@type": "LocalBusiness", name: "Logiin" },
+              areaServed: { "@type": "City", name: "Manaus" },
+            },
+          })),
+        }}
       />
       {/* Hero */}
       <section className="bg-navy pt-28 pb-12 px-4">
