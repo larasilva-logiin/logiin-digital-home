@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { absoluteUrl } from "@/config/site";
+import { getService } from "@/data/services";
 
 const WHATSAPP_URL = "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site";
 
@@ -36,6 +37,7 @@ const BlogPost = () => {
     );
   }
 
+  const relatedService = post.relatedService ? getService(post.relatedService) : undefined;
   const relatedPosts = blogPosts.filter((p) => p.id !== post.id).slice(0, 3);
 
   return (
@@ -168,6 +170,22 @@ const BlogPost = () => {
               })}
             </article>
           </AnimatedSection>
+
+          {relatedService && (
+            <AnimatedSection className="mt-8">
+              <p className="text-muted-foreground">
+                Saiba mais sobre{" "}
+                <Link
+                  to={relatedService.route}
+                  className="font-semibold text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
+                >
+                  {relatedService.name} em Manaus
+                </Link>
+                .
+              </p>
+            </AnimatedSection>
+          )}
+
 
           {/* Related */}
           <AnimatedSection className="mt-16 pt-10 border-t border-border">
