@@ -32,7 +32,7 @@ const ServicePage = ({ slug }: Props) => {
       />
 
       {/* Hero */}
-      <section className="bg-navy pt-28 pb-14 px-4">
+      <section className="bg-navy pt-24 sm:pt-28 pb-12 sm:pb-14 px-4 sm:px-6 lg:px-8">
         <div className="container-max">
           <p className="text-white/40 text-sm mb-3">
             <Link to="/" className="hover:text-primary transition-colors">Início</Link>
@@ -41,11 +41,11 @@ const ServicePage = ({ slug }: Props) => {
             {" / "}
             <span className="text-white/60">{service.name}</span>
           </p>
-          <div className="flex items-start gap-4 mb-4">
-            <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+          <div className="flex items-start gap-3 sm:gap-4 mb-4">
+            <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
               <Icon size={28} className="text-primary" />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
               {service.h1}
             </h1>
           </div>
@@ -63,7 +63,7 @@ const ServicePage = ({ slug }: Props) => {
 
       {/* Conteúdo */}
       <section className="section-padding bg-background">
-        <div className="container-max grid lg:grid-cols-3 gap-10">
+        <div className="container-max grid lg:grid-cols-3 gap-8 lg:gap-10">
           <div className="lg:col-span-2 space-y-10">
             {service.blocks.map((block, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
@@ -87,7 +87,7 @@ const ServicePage = ({ slug }: Props) => {
 
           <aside className="lg:col-span-1">
             <AnimatedSection delay={0.1}>
-              <div className="bg-card border border-border rounded-2xl p-7 sticky top-28">
+              <div className="bg-card border border-border rounded-2xl p-6 sm:p-7 lg:sticky lg:top-28">
                 <h2 className="text-lg font-bold text-foreground mb-4">Para quem serve</h2>
                 <ul className="space-y-3 mb-6">
                   {service.audience.map((a, i) => (
@@ -114,13 +114,13 @@ const ServicePage = ({ slug }: Props) => {
 
       {/* Veja também */}
       <section className="section-padding bg-light-gray">
-        <div className="container-max mb-14">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-6">
+        <div className="container-max mb-10 sm:mb-14">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-foreground mb-6 leading-tight">
             Perguntas frequentes
           </h2>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-5 items-stretch">
             {service.faq.map((f, i) => (
-              <div key={i} className="bg-card border border-border rounded-xl p-6">
+              <div key={i} className="h-full bg-card border border-border rounded-xl p-5 sm:p-6">
                 <h3 className="font-bold text-foreground mb-2">{f.q}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
               </div>
@@ -142,15 +142,15 @@ const ServicePage = ({ slug }: Props) => {
           />
         </div>
         <div className="container-max">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-8">Veja também</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-foreground mb-6 sm:mb-8 leading-tight">Veja também</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 items-stretch">
             {others.map((s) => {
               const OtherIcon = s.icon;
               return (
                 <Link
                   key={s.slug}
                   to={s.route}
-                  className="group h-full bg-card border border-border rounded-xl p-6 flex flex-col hover:shadow-lg transition-shadow"
+                  className="group h-full bg-card border border-border rounded-xl p-5 sm:p-6 flex flex-col hover:shadow-lg transition-shadow"
                 >
                   <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <OtherIcon size={22} className="text-primary" />

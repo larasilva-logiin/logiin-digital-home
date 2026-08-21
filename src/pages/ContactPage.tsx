@@ -38,10 +38,10 @@ const ContactPage = () => {
         path="/contato"
       />
       {/* Hero */}
-      <section className="bg-navy pt-28 pb-12 px-4 text-center">
+      <section className="bg-navy pt-24 sm:pt-28 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 text-center">
         <div className="container-max">
           <AnimatedSection>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3">
               Vamos <span className="text-gradient">conversar?</span>
             </h1>
             <div className="flex items-center justify-center gap-2 text-[hsl(210,30%,70%)]">
@@ -85,7 +85,7 @@ const ContactPage = () => {
 
           {/* Contact Cards */}
           <AnimatedSection delay={0.2}>
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-stretch">
               <a
                 href="https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site"
                 target="_blank"

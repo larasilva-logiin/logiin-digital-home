@@ -27,10 +27,10 @@ const Blog = () => {
       />
     <div>
       {/* Header */}
-      <section className="bg-navy pt-28 pb-12 px-4 text-center">
+      <section className="bg-navy pt-24 sm:pt-28 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 text-center">
         <div className="container-max">
           <AnimatedSection>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3">
               Blog <span className="text-gradient">Logiin</span>
             </h1>
             <p className="text-[hsl(210,30%,70%)] max-w-lg mx-auto mb-8">
@@ -52,7 +52,7 @@ const Blog = () => {
       <section className="section-padding bg-background">
         <div className="container-max">
           {/* Featured */}
-          <AnimatedSection className="mb-14">
+          <AnimatedSection className="mb-10 sm:mb-14">
             <div className="bg-card rounded-xl border border-border overflow-hidden grid md:grid-cols-2 gap-0">
               <div className="aspect-video md:aspect-auto relative overflow-hidden" style={{ minHeight: 200 }}>
                 <img
@@ -75,9 +75,9 @@ const Blog = () => {
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full w-fit" style={{ backgroundColor: `${featured.color}15`, color: featured.color }}>
                   {featured.category}
                 </span>
-                <h2 className="text-2xl font-extrabold text-foreground mt-3 mb-3">{featured.title}</h2>
+                <h2 className="text-xl sm:text-2xl font-extrabold text-foreground mt-3 mb-3 leading-snug">{featured.title}</h2>
                 <p className="text-muted-foreground text-sm mb-4">{featured.excerpt}</p>
-                <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1"><User size={12} /> {featured.author}</span>
                   <span>{featured.date}</span>
                   <span className="flex items-center gap-1"><Clock size={12} /> {featured.readTime}</span>
@@ -109,7 +109,7 @@ const Blog = () => {
           </div>
 
           {/* Grid */}
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14 items-stretch">
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-14 items-stretch">
             <AnimatePresence mode="popLayout">
               {filtered.map((post) => (
                 <motion.div
@@ -165,8 +165,8 @@ const Blog = () => {
 
           {/* Newsletter */}
           <AnimatedSection>
-            <div className="bg-navy rounded-2xl p-8 sm:p-12 text-center">
-              <h3 className="text-2xl font-extrabold text-white mb-2">
+            <div className="bg-navy rounded-2xl p-6 sm:p-12 text-center">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2 leading-snug">
                 Receba novidades e dicas exclusivas
               </h3>
               <p className="text-white/50 text-sm mb-6 max-w-md mx-auto">
