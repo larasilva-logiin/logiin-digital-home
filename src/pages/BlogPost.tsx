@@ -68,7 +68,7 @@ const BlogPost = () => {
         }}
       />
       {/* Header */}
-      <section className="bg-navy pt-28 pb-14 px-4">
+      <section className="bg-navy pt-24 sm:pt-28 pb-12 sm:pb-14 px-4 sm:px-6 lg:px-8">
         <div className="container-max max-w-3xl">
           <AnimatedSection>
             <Link
@@ -84,10 +84,10 @@ const BlogPost = () => {
             >
               {post.category}
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5 [text-wrap:balance]">
               {post.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-white/50">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/50">
               <span className="flex items-center gap-1.5">
                 <User size={14} /> {post.author}
               </span>
@@ -126,7 +126,7 @@ const BlogPost = () => {
                     return (
                       <h2
                         key={i}
-                        className="text-xl sm:text-2xl font-extrabold text-foreground mt-8 mb-3"
+                        className="text-lg sm:text-2xl font-extrabold text-foreground mt-8 mb-3 leading-snug"
                       >
                         {section.text}
                       </h2>
@@ -158,7 +158,7 @@ const BlogPost = () => {
                     return (
                       <div key={i} className="mt-8 mb-4">
                         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                          <Button className="font-semibold rounded-full text-base px-8 py-6">
+                          <Button className="font-semibold rounded-full text-sm sm:text-base px-6 sm:px-8 py-6 whitespace-normal">
                             {section.text} →
                           </Button>
                         </a>
@@ -188,14 +188,14 @@ const BlogPost = () => {
 
 
           {/* Related */}
-          <AnimatedSection className="mt-16 pt-10 border-t border-border">
+          <AnimatedSection className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-border">
             <h3 className="text-xl font-extrabold text-foreground mb-6">Outros artigos</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
               {relatedPosts.map((rp) => (
                 <Link
                   key={rp.id}
                   to={`/blog/${rp.slug}`}
-                  className="group p-4 rounded-xl border border-border hover:shadow-md transition-all"
+                  className="group h-full p-4 rounded-xl border border-border hover:shadow-md transition-all"
                 >
                   <span
                     className="text-[10px] font-semibold px-2 py-0.5 rounded-full"

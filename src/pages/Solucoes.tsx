@@ -50,14 +50,14 @@ const Solucoes = () => {
         }}
       />
       {/* Hero */}
-      <section className="bg-navy pt-28 pb-12 px-4">
+      <section className="bg-navy pt-24 sm:pt-28 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
         <div className="container-max">
           <p className="text-white/40 text-sm mb-2">
             <Link to="/" className="hover:text-primary transition-colors">Início</Link>
             {" / "}
             <span className="text-white/60">Soluções</span>
           </p>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3 leading-tight">
             Nossas Soluções
           </h1>
           <p className="text-[hsl(210,30%,70%)] max-w-xl">
@@ -69,7 +69,7 @@ const Solucoes = () => {
       {/* Filter + Cards */}
       <section className="section-padding bg-background">
         <div className="container-max">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-6">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-foreground mb-6 leading-tight">
             Soluções de segurança e automação em Manaus
           </h2>
           <div className="flex flex-wrap gap-2 mb-10">
@@ -77,7 +77,7 @@ const Solucoes = () => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   filter === cat
                     ? "bg-primary text-white"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
@@ -88,7 +88,7 @@ const Solucoes = () => {
             ))}
           </div>
 
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 items-stretch">
             <AnimatePresence mode="popLayout">
               {filtered.map((sol) => {
                 const Icon = sol.icon;
@@ -104,20 +104,20 @@ const Solucoes = () => {
                     id={sol.id}
                     className={`h-full ${isPrimary ? "md:col-span-2" : ""}`}
                   >
-                    <div className={`bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow h-full flex flex-col ${isPrimary ? "relative border-primary/30 shadow-md" : ""}`}>
+                    <div className={`bg-card rounded-xl border border-border p-5 sm:p-6 hover:shadow-lg transition-shadow h-full flex flex-col ${isPrimary ? "relative border-primary/30 shadow-md" : ""}`}>
                       {isPrimary && (
-                        <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-primary text-white shadow-sm">
+                        <span className="absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-primary text-white shadow-sm">
                           <span className="w-1.5 h-1.5 rounded-full bg-white" />
                           Mais procurado
                         </span>
                       )}
-                      <div className="flex items-start gap-4 mb-4">
+                      <div className="flex items-start gap-3 sm:gap-4 mb-4 pr-24 sm:pr-0">
                         <div className={`rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 ${isPrimary ? "w-14 h-14" : "w-12 h-12"}`}>
                           <Icon size={isPrimary ? 28 : 24} className="text-primary" />
                         </div>
                         <div>
                           <h3 className={`font-bold text-foreground ${isPrimary ? "text-xl" : "text-lg"}`}>{sol.title}</h3>
-                          <div className="flex gap-2 mt-1.5">
+                          <div className="flex flex-wrap gap-2 mt-1.5">
                             {sol.segments.map((seg) => (
                               <span key={seg} className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary">
                                 {seg}
@@ -158,7 +158,7 @@ const Solucoes = () => {
                 <Link
                   key={s.slug}
                   to={s.route}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                  className="px-4 py-2.5 rounded-full text-sm font-medium bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                 >
                   {s.name}
                 </Link>
@@ -172,14 +172,14 @@ const Solucoes = () => {
       <section className="bg-brand-gradient section-padding">
         <div className="container-max text-center">
           <AnimatedSection>
-            <h2 className="text-3xl font-extrabold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight">
               Não sabe qual solução ideal para você?
             </h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">
               Nossos especialistas fazem um diagnóstico gratuito do seu espaço.
             </p>
             <Link to="/contato">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold rounded-full px-8 py-6">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold rounded-full px-6 sm:px-8 py-6 whitespace-normal">
                 Solicitar diagnóstico gratuito
               </Button>
             </Link>

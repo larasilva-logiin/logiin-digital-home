@@ -6,11 +6,11 @@ import logoBranca from "@/assets/logo-branca.webp";
 const Footer = () =>
 <footer className="bg-navy text-white">
     <div className="container-max section-padding pb-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
         {/* Logo & Description */}
         <div>
           <Link to="/" className="inline-block mb-4">
-            <img src={logoBranca} alt="Logiin — Câmeras de Segurança em Manaus" width="200" height="48" loading="lazy" decoding="async" className="h-12 w-auto" />
+            <img src={logoBranca} alt="Logiin — Câmeras de Segurança em Manaus" width="200" height="48" loading="lazy" decoding="async" className="h-10 sm:h-12 w-auto" />
           </Link>
           <p className="text-sm text-white/50 leading-relaxed mb-6">
             Segurança e automação que transformam sua forma de viver.
@@ -90,7 +90,7 @@ const Footer = () =>
         </div>
       </div>
 
-      <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
+      <div className="border-t border-white/10 mt-10 sm:mt-12 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
         <p>© {new Date().getFullYear()} Logiin. Todos os direitos reservados.</p>
         <p>Desenvolvido com tecnologia Logiin</p>
       </div>

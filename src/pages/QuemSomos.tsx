@@ -22,7 +22,7 @@ const QuemSomos = () => (
       path="/quem-somos"
     />
     {/* Hero — Amazonian warm tones */}
-    <section className="relative pt-28 pb-20 px-4 overflow-hidden">
+    <section className="relative pt-24 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={florestaHero} alt="Floresta Amazônica — Logiin, empresa de segurança de Manaus" loading="eager" decoding="async" className="w-full h-full object-cover" />
@@ -34,13 +34,13 @@ const QuemSomos = () => (
             <MapPin size={16} />
             Nascidos em Manaus, conectados ao Brasil
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-white">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 text-white leading-tight [text-wrap:balance]">
             Tecnologia de perto,{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 to-teal-300">
               feita para Manaus
             </span>
           </h1>
-          <p className="max-w-xl mx-auto text-lg text-white/80">
+          <p className="max-w-xl mx-auto text-base sm:text-lg text-white/80">
             Conheça a empresa que protege o que você mais valoriza, com a dedicação e o acolhimento de quem entende a nossa terra.
           </p>
         </AnimatedSection>
@@ -50,12 +50,12 @@ const QuemSomos = () => (
     {/* Nossa História */}
     <section className="section-padding bg-background">
       <div className="container-max">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <AnimatedSection>
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">
               Nossa História
             </span>
-            <h2 className="text-3xl font-extrabold mt-2 mb-6 text-foreground">
+            <h2 className="text-2xl sm:text-3xl font-extrabold mt-2 mb-6 text-foreground leading-tight">
               Cuidando do que importa, perto de você
             </h2>
             <div className="space-y-4 leading-relaxed text-muted-foreground">
@@ -84,20 +84,20 @@ const QuemSomos = () => (
     {/* Valores */}
     <section className="section-padding bg-muted/30">
       <div className="container-max">
-        <AnimatedSection className="text-center mb-14">
-          <h2 className="text-3xl font-extrabold text-foreground">
+        <AnimatedSection className="text-center mb-10 sm:mb-14">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
             Nossos Valores
           </h2>
           <p className="mt-3 max-w-lg mx-auto text-muted-foreground">
             Os pilares que guiam cada decisão e cada projeto que entregamos
           </p>
         </AnimatedSection>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
           {values.map((v, i) => {
             const Icon = v.icon;
             return (
               <AnimatedSection key={i} delay={i * 0.1} className="h-full">
-                <div className="group relative bg-card rounded-3xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border h-full flex flex-col">
+                <div className="group relative bg-card rounded-3xl p-6 sm:p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border h-full flex flex-col">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     {/* Custom layered icon badge */}
@@ -123,14 +123,14 @@ const QuemSomos = () => (
     <section className="section-padding" style={{ background: "linear-gradient(135deg, hsl(160, 45%, 42%) 0%, hsl(175, 50%, 38%) 100%)" }}>
       <div className="container-max text-center">
         <AnimatedSection>
-          <h2 className="text-3xl font-extrabold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight">
             Vamos construir algo incrível juntos?
           </h2>
           <p className="text-white/80 mb-8 max-w-lg mx-auto">
             Conheça nosso trabalho de perto. Nossa equipe está pronta para atender você.
           </p>
           <Link to="/contato">
-            <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 font-semibold rounded-full px-8 py-6">
+            <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 font-semibold rounded-full px-6 sm:px-8 py-6 whitespace-normal">
               Fale com a nossa equipe
             </Button>
           </Link>

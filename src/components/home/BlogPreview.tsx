@@ -12,19 +12,19 @@ const blogImages = [blog1, blog2, blog3];
 const BlogPreview = () => (
   <section className="section-padding bg-light-gray">
     <div className="container-max">
-      <AnimatedSection className="text-center mb-14">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
+      <AnimatedSection className="text-center mb-8 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-foreground mb-3">
           Conteúdo especializado
         </h2>
       </AnimatedSection>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
         {blogPosts.slice(0, 3).map((post, i) => (
           <AnimatedSection key={post.id} delay={i * 0.1} className="h-full">
             <Link to={`/blog/${post.slug}`} className="block group h-full">
               <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                 {/* Thumbnail */}
-                <div className="relative h-48 overflow-hidden flex-shrink-0">
+                <div className="relative h-44 sm:h-48 overflow-hidden flex-shrink-0">
                   <img
                     src={blogImages[i]}
                     alt={`${post.title} — Blog Logiin`}

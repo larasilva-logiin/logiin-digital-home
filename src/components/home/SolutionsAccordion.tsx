@@ -26,8 +26,8 @@ const SolutionsAccordion = () => {
   return (
     <section className="section-padding bg-background overflow-hidden">
       <div className="container-max">
-        <AnimatedSection className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
+        <AnimatedSection className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-foreground mb-3">
             Nossas Soluções
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
@@ -36,7 +36,7 @@ const SolutionsAccordion = () => {
         </AnimatedSection>
 
         {/* Cards row — stacks vertically on mobile */}
-        <div className="hidden sm:flex gap-3 h-[480px] mb-8">
+        <div className="hidden lg:flex gap-3 h-[480px] mb-8">
           {solutions.map((sol, i) => {
             const isActive = i === active;
             return (
@@ -75,7 +75,7 @@ const SolutionsAccordion = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.4 }}
-                    className="absolute bottom-0 left-0 right-0 p-8"
+                    className="absolute bottom-0 left-0 right-0 p-6 xl:p-8"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <sol.icon size={24} className="text-primary" />
@@ -94,7 +94,7 @@ const SolutionsAccordion = () => {
         </div>
 
         {/* Mobile: vertical card list */}
-        <div className="flex flex-col gap-3 sm:hidden mb-8">
+        <div className="flex flex-col gap-3 lg:hidden mb-8">
           {solutions.map((sol, i) => {
             const isActive = i === active;
             return (
@@ -102,7 +102,7 @@ const SolutionsAccordion = () => {
                 key={sol.id}
                 onClick={() => setActive(i)}
                 className="relative rounded-2xl overflow-hidden cursor-pointer"
-                animate={{ height: isActive ? 220 : 56 }}
+                animate={{ height: isActive ? 240 : 60 }}
                 transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
               >
                 <img
