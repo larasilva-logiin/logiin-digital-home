@@ -169,6 +169,22 @@ const BlogPost = () => {
             </article>
           </AnimatedSection>
 
+          {relatedService && (
+            <AnimatedSection className="mt-8">
+              <p className="text-muted-foreground">
+                Saiba mais sobre{" "}
+                <Link
+                  to={relatedService.route}
+                  className="font-semibold text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
+                >
+                  {relatedService.name} em Manaus
+                </Link>
+                .
+              </p>
+            </AnimatedSection>
+          )}
+
+
           {/* Related */}
           <AnimatedSection className="mt-16 pt-10 border-t border-border">
             <h3 className="text-xl font-extrabold text-foreground mb-6">Outros artigos</h3>
