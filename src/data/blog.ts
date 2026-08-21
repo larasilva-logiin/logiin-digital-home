@@ -17,6 +17,7 @@ export interface BlogPost {
   color: string;
   image: string;
   content: BlogSection[];
+  relatedService?: string;
 }
 
 export interface BlogSection {
@@ -29,6 +30,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     slug: "cftv-x-cameras-comuns",
+    relatedService: "cameras-de-seguranca-manaus",
     title: "CFTV x Câmeras Comuns: qual é a diferença?",
     excerpt: "Entenda as diferenças técnicas entre câmeras de segurança profissionais e câmeras comuns, e por que isso importa para sua proteção.",
     category: "Segurança Eletrônica",
@@ -57,6 +59,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 2,
     slug: "5-razoes-automacao-residencial-2026",
+    relatedService: "automacao-residencial-manaus",
     title: "5 razões para ter automação residencial em 2026",
     excerpt: "Descubra como a automação pode transformar sua rotina, economizar energia e trazer mais conforto ao seu dia a dia.",
     category: "Automação",
@@ -84,6 +87,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 3,
     slug: "alarme-monitorado-vale-a-pena",
+    relatedService: "alarmes-manaus",
     title: "Alarme monitorado: vale a pena?",
     excerpt: "Análise completa sobre os benefícios de ter um sistema de alarme monitorado versus sistemas convencionais.",
     category: "Segurança Eletrônica",
@@ -107,6 +111,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 4,
     slug: "como-escolher-fechadura-eletronica",
+    relatedService: "fechaduras-eletronicas-manaus",
     title: "Como escolher a fechadura eletrônica ideal",
     excerpt: "Guia prático para escolher a fechadura digital perfeita para sua casa ou empresa, considerando tipo de porta e necessidades.",
     category: "Controle de Acesso",
@@ -141,6 +146,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     slug: "video-porteiro-seguranca-praticidade",
+    relatedService: "controle-de-acesso-manaus",
     title: "Vídeo porteiro: segurança e praticidade juntos",
     excerpt: "Saiba como o vídeo porteiro pode aumentar a segurança da sua casa e facilitar o controle de visitantes.",
     category: "Controle de Acesso",
@@ -173,6 +179,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 6,
     slug: "casa-inteligente-por-onde-comecar",
+    relatedService: "automacao-residencial-manaus",
     title: "Casa inteligente: por onde começar?",
     excerpt: "Um guia para iniciantes sobre como transformar sua casa em um ambiente inteligente, passo a passo.",
     category: "Casa Inteligente",
