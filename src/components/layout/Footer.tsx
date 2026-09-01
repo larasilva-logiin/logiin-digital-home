@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
-import { solutions } from "@/data/solutions";
+import { solutions, getSolutionRoute } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.webp";
 
 const Footer = () =>
