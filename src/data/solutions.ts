@@ -124,3 +124,19 @@ export const solutions = [
 ];
 
 export const solutionCategories = ["Todos", "Residencial", "Empresarial", "Condomínio"];
+
+// Mapeamento de soluções para suas landing pages específicas
+export const solutionRoutes: Record<string, string> = {
+  cftv: "/cameras-de-seguranca-manaus",
+  "controle-acesso": "/controle-de-acesso-manaus",
+  automacao: "/automacao-residencial-manaus",
+  alarmes: "/alarmes-manaus",
+  // Soluções sem landing page específica continuam apontando para âncoras
+  redes: "/solucoes#redes",
+  outros: "/solucoes#outros",
+};
+
+// Retorna a rota da landing page ou fallback para /solucoes
+export const getSolutionRoute = (id: string): string => {
+  return solutionRoutes[id] || "/solucoes";
+};

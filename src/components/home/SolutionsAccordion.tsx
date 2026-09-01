@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { solutions } from "@/data/solutions";
+import { ArrowRight } from "lucide-react";
+import { solutions, getSolutionRoute } from "@/data/solutions";
 import AnimatedSection from "@/components/AnimatedSection";
 
 import solCftv from "@/assets/sol-cftv.webp";
@@ -86,6 +88,14 @@ const SolutionsAccordion = () => {
                     <p className="text-white/70 text-base max-w-md leading-relaxed">
                       {sol.short}
                     </p>
+                    <Link
+                      to={getSolutionRoute(sol.id)}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-primary hover:text-white transition-colors"
+                    >
+                      Saiba mais sobre {sol.title}
+                      <ArrowRight size={16} />
+                    </Link>
                   </motion.div>
                 )}
               </motion.div>
@@ -146,6 +156,14 @@ const SolutionsAccordion = () => {
                     <p className="text-white/70 text-sm leading-relaxed">
                       {sol.short}
                     </p>
+                    <Link
+                      to={getSolutionRoute(sol.id)}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1.5 mt-2 text-xs font-semibold text-primary hover:text-white transition-colors"
+                    >
+                      Saiba mais sobre {sol.title}
+                      <ArrowRight size={14} />
+                    </Link>
                   </motion.div>
                 )}
               </motion.div>
@@ -167,6 +185,13 @@ const SolutionsAccordion = () => {
           <p className="text-muted-foreground leading-relaxed">
             {activeSol.description}
           </p>
+          <Link
+            to={getSolutionRoute(activeSol.id)}
+            className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-primary hover:underline"
+          >
+            Conhecer {activeSol.title} em detalhes
+            <ArrowRight size={16} />
+          </Link>
         </motion.div>
       </div>
     </section>

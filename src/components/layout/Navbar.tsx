@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { solutions } from "@/data/solutions";
+import { solutions, getSolutionRoute } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.webp";
 
 const navLinks = [
@@ -82,7 +82,7 @@ const Navbar = () => {
                           return (
                             <Link
                               key={sol.id}
-                              to={`/solucoes#${sol.id}`}
+                              to={getSolutionRoute(sol.id)}
                               className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
                             >
                               <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Phone, Mail, MessageCircle } from "lucide-react";
-import { solutions } from "@/data/solutions";
+import { solutions, getSolutionRoute } from "@/data/solutions";
 import logoBranca from "@/assets/logo-branca.webp";
 
 const Footer = () =>
@@ -42,7 +42,7 @@ const Footer = () =>
           <ul className="space-y-2.5 text-sm text-white/50">
             {solutions.map((s) =>
           <li key={s.id}>
-                <Link to={`/solucoes#${s.id}`} className="hover:text-primary transition-colors">
+                <Link to={getSolutionRoute(s.id)} className="hover:text-primary transition-colors">
                   {s.title}
                 </Link>
               </li>
