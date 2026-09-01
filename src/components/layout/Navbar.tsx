@@ -82,7 +82,7 @@ const Navbar = () => {
                           return (
                             <Link
                               key={sol.id}
-                              to={`/solucoes#${sol.id}`}
+                              to={getSolutionRoute(sol.id)}
                               className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
                             >
                               <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

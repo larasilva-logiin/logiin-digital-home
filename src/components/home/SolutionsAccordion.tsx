@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { solutions } from "@/data/solutions";
+import { ArrowRight } from "lucide-react";
+import { solutions, getSolutionRoute } from "@/data/solutions";
 import AnimatedSection from "@/components/AnimatedSection";
 
 import solCftv from "@/assets/sol-cftv.webp";
