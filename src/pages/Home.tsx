@@ -76,8 +76,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Instalação de Câmeras de Segurança em Manaus | Orçamento Personalizado | Logiin"
-        description="Especialistas em instalação de câmeras de segurança em Manaus. Projetos para residências, empresas e condomínios com equipamentos Intelbras, Hikvision e suporte especializado. Solicite seu orçamento pelo WhatsApp."
+        title="Segurança Eletrônica em Manaus | CFTV e Automação | Logiin"
+        description="Instalação de câmeras, alarmes, controle de acesso, cerca elétrica e automação em Manaus. Projetos para residências e empresas. Solicite um orçamento."
         path="/"
       />
       {/* ── HERO CAROUSEL ── */}

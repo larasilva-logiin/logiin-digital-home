@@ -49,7 +49,7 @@ const HeroCarousel = () => {
             <source media="(max-width: 640px)" srcSet={slides[current].mobile} />
             <img
               src={slides[current].desktop}
-              alt="Instalação de câmeras de segurança em Manaus pela Logiin"
+              alt="Sistema de segurança eletrônica e automação em Manaus pela Logiin"
               fetchPriority="high"
               decoding="async"
               className="w-full h-full object-cover object-center"
@@ -65,12 +65,10 @@ const HeroCarousel = () => {
         <div className="container-max px-5 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
             <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-primary/15 text-primary border border-primary/20 mb-3 sm:mb-6">
-              Especialistas em CFTV em Manaus
+              Especialistas em segurança eletrônica em Manaus
             </span>
             <h1 className="text-[1.5rem] leading-[1.2] sm:text-4xl sm:leading-[1.25] lg:text-[52px] lg:leading-[1.2] font-extrabold text-white mb-3 sm:mb-6 lg:mb-7 tracking-tight [text-wrap:balance]">
-              Instalação de{" "}
-              <span className="text-gradient">Câmeras de Segurança</span>{" "}
-              em Manaus com Qualidade e Garantia
+              Segurança eletrônica e automação em Manaus
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-[hsl(210,30%,72%)] max-w-lg mb-5 sm:mb-8 leading-relaxed lg:leading-8">
               Proteja sua residência, empresa ou condomínio com projetos personalizados e instalação profissional. Solicite um orçamento personalizado pelo WhatsApp.
