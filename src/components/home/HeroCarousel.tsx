@@ -1,17 +1,12 @@
-import { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import hero1 from "@/assets/hero-1.webp";
 import hero2 from "@/assets/hero-2.webp";
 import hero3 from "@/assets/hero-3.webp";
-import heroMobile1Asset from "@/assets/hero-mobile-1.png.asset.json";
-import heroMobile2Asset from "@/assets/hero-mobile-2.png.asset.json";
-import heroMobile3Asset from "@/assets/hero-mobile-3.png.asset.json";
-
-const heroMobile1 = heroMobile1Asset.url;
-const heroMobile2 = heroMobile2Asset.url;
-const heroMobile3 = heroMobile3Asset.url;
+import heroMobile1 from "@/assets/hero-mobile-1.webp";
+import heroMobile2 from "@/assets/hero-mobile-2.webp";
+import heroMobile3 from "@/assets/hero-mobile-3.webp";
 
 const slides = [
   { desktop: hero1, mobile: heroMobile1 },
@@ -21,8 +16,10 @@ const slides = [
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const firstRender = useRef(true);
 
   const next = useCallback(() => {
+    firstRender.current = false;
     setCurrent((prev) => (prev + 1) % slides.length);
   }, []);
 
@@ -30,6 +27,7 @@ const HeroCarousel = () => {
     const timer = setInterval(next, 10000);
     return () => clearInterval(timer);
   }, [next]);
+
 
   
 
