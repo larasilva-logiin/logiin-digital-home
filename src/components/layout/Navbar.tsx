@@ -129,39 +129,36 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "tween", duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-14 sm:top-16 bg-navy/98 backdrop-blur-xl z-40"
-          >
-            <nav className="container-max px-6 py-8 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`px-4 py-3 rounded-lg text-lg font-medium transition-colors ${
-                    location.pathname === link.path
-                      ? "text-primary bg-primary/10"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link to="/contato" className="mt-4">
-                <Button className="w-full font-semibold rounded-full text-base py-6">
-                  Solicitar Orçamento
-                </Button>
-              </Link>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Mobile Menu — slide em transform/opacity (composto pela GPU) */}
+      <div
+        aria-hidden={!isOpen}
+        className={`lg:hidden fixed inset-0 top-14 sm:top-16 bg-navy/98 backdrop-blur-xl z-40 transition-[opacity,transform] duration-300 ease-out ${
+          isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
+        }`}
+      >
+        <nav className="container-max px-6 py-8 flex flex-col gap-2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              tabIndex={isOpen ? 0 : -1}
+              className={`px-4 py-3 rounded-lg text-lg font-medium transition-colors ${
+                location.pathname === link.path
+                  ? "text-primary bg-primary/10"
+                  : "text-white/70 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link to="/contato" className="mt-4" tabIndex={isOpen ? 0 : -1}>
+            <Button className="w-full font-semibold rounded-full text-base py-6">
+              Solicitar Orçamento
+            </Button>
+          </Link>
+        </nav>
+      </div>
+
     </header>
   );
 };
