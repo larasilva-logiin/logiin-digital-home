@@ -88,7 +88,10 @@ const Home = () => {
       <HeroCarousel />
 
       {/* ── NOSSAS SOLUÇÕES ── */}
-      <SolutionsAccordion />
+      <Suspense fallback={<div className="min-h-[400px]" />}>
+        <SolutionsAccordion />
+      </Suspense>
+
 
       {/* ── PACOTES DE CÂMERAS ── */}
       <section id="pacotes" className="section-padding bg-light-gray">
