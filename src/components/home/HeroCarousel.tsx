@@ -37,22 +37,26 @@ const HeroCarousel = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
-          initial={{ opacity: 0, scale: 1.05 }}
+          initial={firstRender.current ? false : { opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
           <picture>
-            <source media="(max-width: 640px)" srcSet={slides[current].mobile} />
+            <source media="(max-width: 640px)" srcSet={slides[current].mobile} width={768} height={1280} />
             <img
               src={slides[current].desktop}
               alt="Sistema de segurança eletrônica e automação em Manaus pela Logiin"
-              fetchPriority="high"
+              fetchPriority={current === 0 ? "high" : "low"}
+              loading="eager"
               decoding="async"
+              width={1536}
+              height={1024}
               className="w-full h-full object-cover object-center"
             />
           </picture>
+
           {/* Stronger vertical gradient on mobile for readability, horizontal on desktop */}
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--navy)/0.85)] via-[hsl(var(--navy)/0.7)] to-[hsl(var(--navy)/0.9)] sm:bg-gradient-to-r sm:from-[hsl(var(--navy)/0.92)] sm:via-[hsl(var(--navy)/0.75)] sm:to-[hsl(var(--navy)/0.5)]" />
         </motion.div>
