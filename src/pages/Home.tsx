@@ -261,7 +261,10 @@ const Home = () => {
       </section>
 
       {/* ── BLOG PREVIEW ── */}
-      <BlogPreview />
+      <Suspense fallback={<div className="min-h-[300px]" />}>
+        <BlogPreview />
+      </Suspense>
+
     </>
   );
 };
