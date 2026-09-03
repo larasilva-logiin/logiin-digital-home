@@ -110,7 +110,7 @@ const HeroCarousel = () => {
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
+            onClick={() => show(i)}
             className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               i === current
                 ? "bg-primary w-6 sm:w-8"
