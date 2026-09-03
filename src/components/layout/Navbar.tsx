@@ -76,37 +76,34 @@ const Navbar = () => {
 
                 {/* Dropdown */}
                 {link.hasDropdown && (
-                  <AnimatePresence>
-                    {dropdownOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 8 }}
-                        transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-1 w-72 bg-navy-2 border border-white/10 rounded-xl shadow-2xl p-2 backdrop-blur-xl"
-                      >
-                        {solutions.map((sol) => {
-                          const Icon = sol.icon;
-                          return (
-                            <Link
-                              key={sol.id}
-                              to={getSolutionRoute(sol.id)}
-                              className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
-                            >
-                              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                <Icon size={16} className="text-primary" />
-                              </div>
-                              <div>
-                                <p className="text-sm font-medium text-white">{sol.title}</p>
-                                <p className="text-xs text-white/40 line-clamp-1">{sol.short}</p>
-                              </div>
-                            </Link>
-                          );
-                        })}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <div
+                    className={`absolute top-full left-0 mt-1 w-72 bg-navy-2 border border-white/10 rounded-xl shadow-2xl p-2 backdrop-blur-xl transition-[opacity,transform] duration-150 ${
+                      dropdownOpen
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "opacity-0 translate-y-2 pointer-events-none"
+                    }`}
+                  >
+                    {solutions.map((sol) => {
+                      const Icon = sol.icon;
+                      return (
+                        <Link
+                          key={sol.id}
+                          to={getSolutionRoute(sol.id)}
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors group"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon size={16} className="text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-white">{sol.title}</p>
+                            <p className="text-xs text-white/40 line-clamp-1">{sol.short}</p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 )}
+
               </div>
             ))}
           </nav>
