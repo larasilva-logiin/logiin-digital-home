@@ -126,7 +126,13 @@ async function main() {
       await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
       // Give React a beat to finish any final effects.
       await page.waitForTimeout(300);
-      const html = await page.content();
+      let html = await page.content();
+      // Remove scripts de terceiros injetados em runtime (Meta Pixel), para que o
+      // HTML estático contenha apenas a implementação única do index.html.
+      html = html
+        .replace(/<script[^>]*connect\.facebook\.net[^>]*>\s*<\/script>/gi, "")
+        .replace(/<script[^>]*src="[^"]*fbevents\.js[^"]*"[^>]*>\s*<\/script>/gi, "");
+
       const outDir =
         route === "/" ? distDir : path.join(distDir, route.replace(/^\//, ""));
       fs.mkdirSync(outDir, { recursive: true });

@@ -1,6 +1,5 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
 import hero1 from "@/assets/hero-1.webp";
 import hero2 from "@/assets/hero-2.webp";
 import hero3 from "@/assets/hero-3.webp";
@@ -16,11 +15,16 @@ const slides = [
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
-  const firstRender = useRef(true);
+  // Apenas os slides já exibidos são montados: evita baixar 3 imagens no
+  // carregamento inicial (protege LCP/FCP no mobile).
+  const [mounted, setMounted] = useState<number[]>([0]);
 
   const next = useCallback(() => {
-    firstRender.current = false;
-    setCurrent((prev) => (prev + 1) % slides.length);
+    setCurrent((prev) => {
+      const n = (prev + 1) % slides.length;
+      setMounted((m) => (m.includes(n) ? m : [...m, n]));
+      return n;
+    });
   }, []);
 
   useEffect(() => {
@@ -28,35 +32,40 @@ const HeroCarousel = () => {
     return () => clearInterval(timer);
   }, [next]);
 
-
-  
+  const show = useCallback((i: number) => {
+    setMounted((m) => (m.includes(i) ? m : [...m, i]));
+    setCurrent(i);
+  }, []);
 
   return (
     <section className="relative h-[100svh] overflow-hidden bg-navy">
-      {/* Background images */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0"
-        >
-          <picture>
-            <source media="(max-width: 640px)" srcSet={slides[current].mobile} />
-            <img
-              src={slides[current].desktop}
-              alt="Sistema de segurança eletrônica e automação em Manaus pela Logiin"
-              fetchPriority="high"
-              decoding="async"
-              className="w-full h-full object-cover object-center"
-            />
-          </picture>
-          {/* Stronger vertical gradient on mobile for readability, horizontal on desktop */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--navy)/0.85)] via-[hsl(var(--navy)/0.7)] to-[hsl(var(--navy)/0.9)] sm:bg-gradient-to-r sm:from-[hsl(var(--navy)/0.92)] sm:via-[hsl(var(--navy)/0.75)] sm:to-[hsl(var(--navy)/0.5)]" />
-        </motion.div>
-      </AnimatePresence>
+      {/* Background images — crossfade em CSS (opacity), composto pela GPU */}
+      {slides.map((slide, i) =>
+        mounted.includes(i) ? (
+          <div
+            key={i}
+            aria-hidden={i !== current}
+            className="absolute inset-0 transition-opacity duration-700 ease-out"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            <picture>
+              <source media="(max-width: 640px)" srcSet={slide.mobile} width={768} height={1280} />
+              <img
+                src={slide.desktop}
+                alt="Sistema de segurança eletrônica e automação em Manaus pela Logiin"
+                fetchPriority={i === 0 ? "high" : "low"}
+                decoding="async"
+                width={1536}
+                height={1024}
+                className="w-full h-full object-cover object-center"
+              />
+            </picture>
+            {/* Stronger vertical gradient on mobile for readability, horizontal on desktop */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--navy)/0.85)] via-[hsl(var(--navy)/0.7)] to-[hsl(var(--navy)/0.9)] sm:bg-gradient-to-r sm:from-[hsl(var(--navy)/0.92)] sm:via-[hsl(var(--navy)/0.75)] sm:to-[hsl(var(--navy)/0.5)]" />
+          </div>
+        ) : null,
+      )}
+
 
       {/* Static Content */}
       <div className="relative z-10 h-full flex flex-col justify-center sm:justify-center pt-16 sm:pt-20 pb-28 sm:pb-0">
@@ -101,7 +110,7 @@ const HeroCarousel = () => {
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
+            onClick={() => show(i)}
             className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               i === current
                 ? "bg-primary w-6 sm:w-8"

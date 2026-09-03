@@ -1,11 +1,10 @@
+import { lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Shield, Layers, Users, Clock, Smartphone, Award, Zap, Wrench, MessageCircle, Home as HomeIcon, Building2, Building } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import HeroCarousel from "@/components/home/HeroCarousel";
-import SolutionsAccordion from "@/components/home/SolutionsAccordion";
-import BlogPreview from "@/components/home/BlogPreview";
 import familiaSegura from "@/assets/familia-segura.webp";
 import {
   Accordion,
@@ -13,6 +12,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+// Seções abaixo da dobra: carregadas sob demanda para aliviar o JS inicial
+const SolutionsAccordion = lazy(() => import("@/components/home/SolutionsAccordion"));
+const BlogPreview = lazy(() => import("@/components/home/BlogPreview"));
+
 
 const WHATSAPP_URL =
   "https://wa.me/5592982122563?text=Ol%C3%A1%2C%20vinda%20atrav%C3%A9s%20do%20site";
@@ -84,7 +88,10 @@ const Home = () => {
       <HeroCarousel />
 
       {/* ── NOSSAS SOLUÇÕES ── */}
-      <SolutionsAccordion />
+      <Suspense fallback={<div className="min-h-[400px]" />}>
+        <SolutionsAccordion />
+      </Suspense>
+
 
       {/* ── PACOTES DE CÂMERAS ── */}
       <section id="pacotes" className="section-padding bg-light-gray">
@@ -254,7 +261,10 @@ const Home = () => {
       </section>
 
       {/* ── BLOG PREVIEW ── */}
-      <BlogPreview />
+      <Suspense fallback={<div className="min-h-[300px]" />}>
+        <BlogPreview />
+      </Suspense>
+
     </>
   );
 };
