@@ -134,15 +134,27 @@ async function main() {
         .replace(/<script[^>]*src="[^"]*fbevents\.js[^"]*"[^>]*>\s*<\/script>/gi, "");
 
       // O runtime troca media="print" por media="all" no CSS do Google Fonts.
-      // Restaura o carregamento não bloqueante no HTML estático.
+      // Restaura o carregamento não bloqueante no HTML estático (sem tocar no
+      // fallback dentro de <noscript>).
+      const noscripts = [];
+      html = html.replace(/<noscript>[\s\S]*?<\/noscript>/gi, (m) => {
+        noscripts.push(m);
+        return `<!--__NOSCRIPT_${noscripts.length - 1}__-->`;
+      });
       html = html.replace(
-        /<link([^>]*fonts\.googleapis\.com\/css2[^>]*)>/gi,
+        /<link([^>]*fonts\.googleapis\.com\/css2[^>]*?)\s*\/?>/gi,
         (tag, attrs) => {
+          if (!/stylesheet/i.test(attrs)) return tag;
           if (/media="print"/i.test(attrs)) return tag;
-          const cleaned = attrs.replace(/\smedia="[^"]*"/gi, "").replace(/\sonload="[^"]*"/gi, "");
+          const cleaned = attrs
+            .replace(/\smedia="[^"]*"/gi, "")
+            .replace(/\sonload="[^"]*"/gi, "")
+            .trimEnd();
           return `<link${cleaned} media="print" onload="this.media='all'">`;
         },
       );
+      html = html.replace(/<!--__NOSCRIPT_(\d+)__-->/g, (_, i) => noscripts[Number(i)]);
+
 
 
       const outDir =
