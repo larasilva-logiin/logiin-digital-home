@@ -133,6 +133,18 @@ async function main() {
         .replace(/<script[^>]*connect\.facebook\.net[^>]*>\s*<\/script>/gi, "")
         .replace(/<script[^>]*src="[^"]*fbevents\.js[^"]*"[^>]*>\s*<\/script>/gi, "");
 
+      // O runtime troca media="print" por media="all" no CSS do Google Fonts.
+      // Restaura o carregamento não bloqueante no HTML estático.
+      html = html.replace(
+        /<link([^>]*fonts\.googleapis\.com\/css2[^>]*)>/gi,
+        (tag, attrs) => {
+          if (/media="print"/i.test(attrs)) return tag;
+          const cleaned = attrs.replace(/\smedia="[^"]*"/gi, "").replace(/\sonload="[^"]*"/gi, "");
+          return `<link${cleaned} media="print" onload="this.media='all'">`;
+        },
+      );
+
+
       const outDir =
         route === "/" ? distDir : path.join(distDir, route.replace(/^\//, ""));
       fs.mkdirSync(outDir, { recursive: true });
