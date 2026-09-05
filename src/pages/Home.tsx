@@ -83,6 +83,28 @@ const Home = () => {
         title="Segurança Eletrônica em Manaus | CFTV e Automação | Logiin"
         description="Instalação de câmeras, alarmes, controle de acesso, cerca elétrica e automação em Manaus. Projetos para residências e empresas. Solicite um orçamento."
         path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://logiin.com.br/#website",
+              name: "Logiin Segurança & Automação",
+              url: "https://logiin.com.br/",
+              inLanguage: "pt-BR",
+              publisher: { "@id": "https://logiin.com.br/#empresa" },
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://logiin.com.br/#faq",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ],
+        }}
       />
       {/* ── HERO CAROUSEL ── */}
       <HeroCarousel />
