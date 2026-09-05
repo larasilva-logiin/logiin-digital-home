@@ -36,8 +36,21 @@ const Solucoes = () => {
               "@type": "Service",
               name: s.title,
               description: s.description,
-              provider: { "@type": "LocalBusiness", name: "Logiin" },
-              areaServed: { "@type": "City", name: "Manaus" },
+              provider: {
+                "@type": "LocalBusiness",
+                "@id": "https://logiin.com.br/#empresa",
+                name: "Logiin Segurança & Automação",
+                url: "https://logiin.com.br/",
+              },
+              areaServed: {
+                "@type": "City",
+                name: "Manaus",
+                containedInPlace: {
+                  "@type": "State",
+                  name: "Amazonas",
+                  containedInPlace: { "@type": "Country", name: "Brasil" },
+                },
+              },
             },
           })),
         }}
