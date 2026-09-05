@@ -66,20 +66,41 @@
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "SecuritySystemInstaller"],
-    "name": "Logiin",
+    "@id": "https://logiin.com.br/#empresa",
+    "name": "Logiin Segurança & Automação",
+    "url": "https://logiin.com.br/",
     "description": "Segurança eletrônica e automação em Manaus. Instalação de câmeras, alarmes, controle de acesso, cerca elétrica e automação residencial e corporativa.",
-    "areaServed": { "@type": "City", "name": "Manaus" },
     "telephone": "+55-92-98212-2563",
-    "priceRange": "$$",
     "image": "https://logiin.com.br/assets/logo-logiin.webp",
     "logo": "https://logiin.com.br/assets/logo-logiin.webp",
-    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 08:00-12:00"],
-    "sameAs": [
-      "https://instagram.com/logiin_segurancaeautomacao",
-      "https://www.facebook.com/profile.php?id=61587541454121",
-      "https://wa.me/5592982122563"
+    "areaServed": {
+      "@type": "City",
+      "name": "Manaus",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Amazonas",
+        "containedInPlace": { "@type": "Country", "name": "Brasil" }
+      }
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "08:00",
+        "closes": "17:00"
+      }
     ],
-    "address": { "@type": "PostalAddress", "addressLocality": "Manaus", "addressRegion": "AM", "addressCountry": "BR" }
+    "sameAs": [
+      "https://www.instagram.com/logiin_segurancaeautomacao/",
+      "https://www.facebook.com/profile.php?id=61587541454121&locale=pt_BR",
+      "https://www.linkedin.com/in/logiin-automa%C3%A7%C3%A3o-5216793b4/"
+    ]
   }
   </script>
   <script type="application/ld+json">
