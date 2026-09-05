@@ -129,7 +129,7 @@ const ContactPage = () => {
                   <Instagram size={24} className="text-primary" />
                 </div>
                 <h3 className="font-semibold text-foreground text-sm mb-1">Instagram</h3>
-                <p className="text-xs text-muted-foreground mb-3">@logiin</p>
+                <p className="text-xs text-muted-foreground mb-3">@logiin_segurancaeautomacao</p>
                 <Button variant="outline" size="sm" className="w-full font-semibold rounded-full text-xs border-primary text-primary hover:bg-primary hover:text-white">
                   Ver perfil
                 </Button>
