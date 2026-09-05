@@ -58,10 +58,15 @@ const BlogPost = () => {
           headline: post.title,
           description: post.excerpt,
           datePublished: toISODate(post.date),
-          author: { "@type": "Organization", name: post.author },
+          author: {
+            "@type": "Organization",
+            "@id": "https://logiin.com.br/#empresa",
+            name: "Logiin Segurança & Automação",
+          },
           publisher: {
             "@type": "Organization",
-            name: "Logiin",
+            "@id": "https://logiin.com.br/#empresa",
+            name: "Logiin Segurança & Automação",
             logo: { "@type": "ImageObject", url: "https://logiin.com.br/assets/logo-logiin.webp" },
           },
           mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
